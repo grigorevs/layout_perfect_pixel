@@ -1,4 +1,10 @@
+import Header from '@/components/Header';
+import PageWrap from '@/components/ui/PageWrap';
 import React from 'react';
 export default function Page() {
-  return <h1>Hello Next.js!</h1>;
+  return (
+    <PageWrap>
+      <Header />
+    </PageWrap>
+  );
 }
