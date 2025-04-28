@@ -20,7 +20,7 @@ const Header = () => {
           <StyledListItem>Blog</StyledListItem>
           <StyledListItem>Pricing</StyledListItem>
         </StyledList>
-        <ContactButton>Contact Us {'>'}</ContactButton>
+        <ContactButton>Contact Us →</ContactButton>
       </HeaderContainer>
     </HeaderWrapper>
   );
