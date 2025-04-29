@@ -1,4 +1,5 @@
 'use client';
+
 import {
   ContactButton,
   HeaderContainer,
@@ -7,7 +8,7 @@ import {
   StyledListItem,
 } from './index.styles';
 import Image from 'next/image';
-import Logo from '../../public/Logo.svg';
+import Logo from '../../public/images/Logo.svg';
 
 const Header = () => {
   return (

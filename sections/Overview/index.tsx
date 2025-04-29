@@ -11,10 +11,10 @@ import {
   OverviewWrap,
 } from './index.styles';
 import Image from 'next/image';
-import IconOne from '@/public/images/Icon1.svg';
-import IconTwo from '@/public/images/Icon2.svg';
-import IconThree from '@/public/images/Icon3.svg';
-import IconFour from '@/public/images/Icon4.svg';
+import IconOne from '@/public/images/home/Icon1.svg';
+import IconTwo from '@/public/images/home/Icon2.svg';
+import IconThree from '@/public/images/home/Icon3.svg';
+import IconFour from '@/public/images/home/Icon4.svg';
 
 const Overview = () => {
   return (

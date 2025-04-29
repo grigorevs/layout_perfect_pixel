@@ -17,12 +17,12 @@ import {
   Sales,
   SalesReport,
 } from './index.styles';
-import SalesLight from '@/public/images/Sales-Light.svg';
-import StatisticLight from '@/public/images/Statistic-Light.svg';
-import Customer from '@/public/images/Customer-Growth.svg';
-import Line from '@/public/images/Line.svg';
-import TopBlur from '@/public/images/Ellipse125.svg';
-import BottomBlur from '@/public/images/Ellipse124.svg';
+import SalesLight from '@/public/images/home/Sales-Light.svg';
+import StatisticLight from '@/public/images/home/Statistic-Light.svg';
+import Customer from '@/public/images/home/Customer-Growth.svg';
+import Line from '@/public/images/home/Line.svg';
+import TopBlur from '@/public/images/home/Ellipse125.svg';
+import BottomBlur from '@/public/images/home/Ellipse124.svg';
 
 const HeaderSection = () => {
   return (

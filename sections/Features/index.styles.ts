@@ -5,7 +5,7 @@ export const FeatureWrap = styled.div`
   justify-content: center;
   gap: 58px;
   align-items: center;
-  margin: 160px 0 94px;
+  margin: 165px 0 94px;
 `;
 
 export const FeatureBlock = styled.div`
@@ -17,7 +17,7 @@ export const FeatureTitle = styled.h1`
   font-size: 56px;
   font-weight: 600;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: -1.28px;
   color: #1d1e25;
   width: 557px;
   margin-bottom: 24px;

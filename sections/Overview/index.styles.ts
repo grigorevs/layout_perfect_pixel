@@ -15,7 +15,7 @@ export const OverviewTitle = styled.h1`
   font-family: 'Inter-Bold';
   font-size: 56px;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: -2.3px;
   color: #ffffff;
   width: 816px;
   margin: 100px 0 24px;

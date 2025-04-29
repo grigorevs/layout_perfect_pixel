@@ -41,7 +41,7 @@ export const HeaderText = styled.p`
   font-weight: 600;
   font-size: 32px;
   line-height: 42px;
-  letter-spacing: -1px;
+  letter-spacing: -0.9px;
   color: #1d1e25;
   width: 514px;
 `;
@@ -88,18 +88,20 @@ export const HeaderImagesBlock = styled.div`
 
 export const SalesReport = styled(Image)`
   position: absolute;
-  top: 155px;
+  top: 115px;
+  left: -3px;
 `;
 
 export const CustomerGrowth = styled(Image)`
   position: absolute;
-  top: 105px;
-  left: 338px;
+  top: 65px;
+  left: 335px;
 `;
 
 export const Sales = styled(Image)`
   position: absolute;
-  top: 530px;
+  top: 490px;
+  left: -4px;
 `;
 
 export const BackgroundTopBlur = styled(Image)`

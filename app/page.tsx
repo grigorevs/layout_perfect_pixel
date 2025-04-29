@@ -1,17 +1,24 @@
 import Header from '@/components/Header';
-import HeadeSection from '@/sections/HeaderSection';
+import HeaderSection from '@/sections/HeaderSection';
 import PageWrap from '@/components/ui/PageWrap';
-import React from 'react';
 import Overview from '@/sections/Overview';
 import Features from '@/sections/Features';
+import Strength from '@/sections/Strength';
+import Partners from '@/sections/Partners';
+import Services from '@/sections/Services';
 
-export default function Page() {
+const Page = () => {
   return (
     <PageWrap>
       <Header />
-      <HeadeSection />
+      <HeaderSection />
       <Overview />
       <Features />
+      <Strength />
+      <Partners />
+      <Services />
     </PageWrap>
   );
-}
+};
+
+export default Page;
