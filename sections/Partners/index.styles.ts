@@ -17,7 +17,7 @@ export const PartnersTextBlock = styled.div`
 `;
 
 export const PartnersTitle = styled.h1`
-  font-family: 'Inter-Bold';
+  font-family: 'Inter-SemiBold';
   font-size: 56px;
   line-height: 120%;
   letter-spacing: -2px;

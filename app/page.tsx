@@ -8,6 +8,7 @@ import Partners from '@/sections/Partners';
 import Services from '@/sections/Services';
 import Insight from '@/sections/Insight';
 import Testimonials from '@/sections/Testimonials';
+import Footer from '@/sections/Footer';
 
 const Page = () => {
   return (
@@ -21,6 +22,7 @@ const Page = () => {
       <Services />
       <Insight />
       <Testimonials />
+      <Footer />
     </PageWrap>
   );
 };

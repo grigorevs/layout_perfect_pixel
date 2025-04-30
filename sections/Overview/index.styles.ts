@@ -12,7 +12,7 @@ export const OverviewBlock = styled.div`
 `;
 
 export const OverviewTitle = styled.h1`
-  font-family: 'Inter-Bold';
+  font-family: 'Inter-SemiBold';
   font-size: 56px;
   line-height: 120%;
   letter-spacing: -2.3px;
@@ -47,7 +47,7 @@ export const OverviewDetailsItem = styled.div`
 `;
 
 export const OverviewDetailsItemTitle = styled.h3`
-  font-family: 'Inter-Bold';
+  font-family: 'Inter-SemiBold';
   font-weight: 600;
   font-size: 32px;
   line-height: 42px;

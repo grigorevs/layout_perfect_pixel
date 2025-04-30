@@ -5,13 +5,44 @@ export const TestimonialWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 69px 0 160px;
+  background-color: #ffffff;
+  z-index: 100;
+`;
+
+export const TestimonialTitle = styled.h1`
+  font-family: 'Inter-SemiBold';
+  font-size: 56px;
+  line-height: 120%;
+  letter-spacing: -2px;
+  color: #101010;
+  width: 530px;
+`;
+
+export const TestimonialText = styled.p`
+  font-family: 'Inter-Medium';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: #7e8492;
+  width: 376px;
+`;
+
+export const TestimonialTextBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin-bottom: 112px;
 `;
 
 export const TestimonialReviewItem = styled.div`
-  width: 1039px;
+  width: 898px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 `;
 
 export const TestimonialUser = styled.div`
@@ -127,4 +158,10 @@ export const TestimonialPrevButton = styled.button`
 export const TestimonialButtonsBlock = styled.div`
   display: flex;
   gap: 16px;
+`;
+
+export const TestimonialBracketsIcon = styled(Image)`
+  position: absolute;
+  top: -65px;
+  left: -150px;
 `;

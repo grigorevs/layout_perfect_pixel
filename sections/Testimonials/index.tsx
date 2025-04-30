@@ -4,17 +4,21 @@ import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import UserPic1 from '@/public/images/home/UserPic1.png';
 import UserPic2 from '@/public/images/home/UserPic2.png';
-import Star from '@/public/images/home/Star.svg';
+import UserPic3 from '@/public/images/home/UserPic3.avif';
 import Brackets from '@/public/images/home/Brackets.svg';
 import ArrowNext from '@/public/images/home/ArrowNext.svg';
 import ArrowBack from '@/public/images/home/ArrowPrevDisabled.svg';
 import {
+  TestimonialBracketsIcon,
   TestimonialButtonsBlock,
   TestimonialNextButton,
   TestimonialPrevButton,
   TestimonialRateBlock,
   TestimonialReviewBlock,
   TestimonialReviewItem,
+  TestimonialText,
+  TestimonialTextBlock,
+  TestimonialTitle,
   TestimonialUser,
   TestimonialUserPic,
   TestimonialUserTextBlock,
@@ -45,10 +49,19 @@ const customersData: Data[] = [
   },
   {
     image: UserPic2,
-    review: '“Everything is bad. I hate Coca!”',
+    review:
+      '“Everything is bad. I hate Coca! With Agency the results are very satisfying. wrapped with Hight quality.”',
     rate: '1.0',
     name: 'Elena Ivanova',
     post: 'Clean master',
+  },
+  {
+    image: UserPic3,
+    review:
+      '“Everything is cool. I love Coca! With Agency the results are very satisfying. wrapped with Hight quality.”',
+    rate: '4.0',
+    name: 'Ivan Petrov',
+    post: 'Developer',
   },
 ];
 
@@ -67,7 +80,14 @@ const Testimonials = () => {
 
   return (
     <TestimonialWrap>
+      <TestimonialTextBlock>
+        <TestimonialTitle>What our customer are saying</TestimonialTitle>
+        <TestimonialText>
+          We are trusted numerous companies from different business to meet their needs
+        </TestimonialText>
+      </TestimonialTextBlock>
       <TestimonialReviewItem>
+        <TestimonialBracketsIcon src={Brackets} alt="Brackets" />
         <TestimonialRateBlock>
           <StarRating rate={currentCustomer.rate} />
           <TestimoniaRate>{currentCustomer.rate}</TestimoniaRate>

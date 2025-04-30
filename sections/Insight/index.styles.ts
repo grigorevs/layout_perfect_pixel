@@ -16,7 +16,7 @@ export const InsightTextBlock = styled.div`
 `;
 
 export const InsightTitle = styled.h1`
-  font-family: 'Inter-Bold';
+  font-family: 'Inter-SemiBold';
   font-size: 56px;
   line-height: 120%;
   letter-spacing: -2px;

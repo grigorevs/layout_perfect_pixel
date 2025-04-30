@@ -5,7 +5,6 @@ import {
   BackgroundTopBlur,
   CustomerGrowth,
   HeaderBlock,
-  HeaderButton,
   HeaderDescription,
   HeaderImagesBlock,
   HeaderInput,
@@ -23,6 +22,7 @@ import Customer from '@/public/images/home/Customer-Growth.svg';
 import Line from '@/public/images/home/Line.svg';
 import TopBlur from '@/public/images/home/Ellipse125.svg';
 import BottomBlur from '@/public/images/home/Ellipse124.svg';
+import Button from '@/components/Button';
 
 const HeaderSection = () => {
   return (
@@ -40,7 +40,7 @@ const HeaderSection = () => {
         </HeaderDescription>
         <HeaderInputBlock>
           <HeaderInput type="email" placeholder="Enter your email" />
-          <HeaderButton>Try for free</HeaderButton>
+          <Button>Try for free</Button>
         </HeaderInputBlock>
       </HeaderItem>
       <HeaderImagesBlock>

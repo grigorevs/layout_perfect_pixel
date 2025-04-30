@@ -46,7 +46,7 @@ export const StrengthDescription = styled.div`
 `;
 
 export const StrengthDescriptionTitle = styled.h1`
-  font-family: 'Inter-Bold';
+  font-family: 'Inter-SemiBold';
   font-weight: 600;
   font-size: 56px;
   line-height: 120%;

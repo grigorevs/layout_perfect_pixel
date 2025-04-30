@@ -16,7 +16,7 @@ export const ServicesTextBlock = styled.div`
 `;
 
 export const ServicesTitle = styled.h1`
-  font-family: 'Inter-Bold';
+  font-family: 'Inter-SemiBold';
   font-weight: 600;
   font-size: 56px;
   line-height: 120%;
@@ -56,7 +56,7 @@ export const ServicesContentTextBlock = styled.div`
 `;
 
 export const ServicesContentTitle = styled.h3`
-  font-family: 'Inter-Bold';
+  font-family: 'Inter-SemiBold';
   font-weight: 600;
   font-size: 32px;
   line-height: 42px;

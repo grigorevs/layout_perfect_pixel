@@ -13,7 +13,7 @@ export const FeatureBlock = styled.div`
 `;
 
 export const FeatureTitle = styled.h1`
-  font-family: 'Inter';
+  font-family: 'Inter-SemiBold';
   font-size: 56px;
   font-weight: 600;
   line-height: 120%;

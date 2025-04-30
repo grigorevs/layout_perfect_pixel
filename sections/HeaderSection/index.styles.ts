@@ -18,6 +18,7 @@ export const HeaderItem = styled.div`
 
 export const HeaderTitle = styled.h1`
   font-family: 'Inter-Bold';
+  font-weight: 700;
   font-size: 80px;
   line-height: 120%;
   letter-spacing: -3px;
@@ -37,7 +38,7 @@ export const LineImage = styled(Image)`
 `;
 
 export const HeaderText = styled.p`
-  font-family: 'Inter-Medium';
+  font-family: 'Inter-SemiBold';
   font-weight: 600;
   font-size: 32px;
   line-height: 42px;
@@ -66,20 +67,6 @@ export const HeaderInput = styled.input`
   border-bottom: 1px #ced1d8 solid;
   outline: none;
   background-color: transparent;
-`;
-
-export const HeaderButton = styled.button`
-  background-color: #1d1e25;
-  border-radius: 100px;
-  border: none;
-  width: 175px;
-  height: 56px;
-  color: #ffffff;
-  font-family: 'Inter-Bold';
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0;
-  cursor: pointer;
 `;
 
 export const HeaderImagesBlock = styled.div`
