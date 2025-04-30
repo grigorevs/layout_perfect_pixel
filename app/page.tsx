@@ -6,6 +6,8 @@ import Features from '@/sections/Features';
 import Strength from '@/sections/Strength';
 import Partners from '@/sections/Partners';
 import Services from '@/sections/Services';
+import Insight from '@/sections/Insight';
+import Testimonials from '@/sections/Testimonials';
 
 const Page = () => {
   return (
@@ -17,6 +19,8 @@ const Page = () => {
       <Strength />
       <Partners />
       <Services />
+      <Insight />
+      <Testimonials />
     </PageWrap>
   );
 };
