@@ -12,4 +12,11 @@ export const StyledButton = styled.button`
   line-height: 25px;
   letter-spacing: 0;
   cursor: pointer;
+
+  @media (max-width: 1200px) {
+    width: 108px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 20px;
+  }
 `;

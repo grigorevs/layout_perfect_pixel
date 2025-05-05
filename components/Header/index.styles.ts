@@ -1,12 +1,24 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 const HeaderWrapper = styled.div`
-  @media (min-width: 1440px) {
-    height: 114px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  height: 114px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 400px) {
+    width: 100vw;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 400px) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: 1200px) {
     width: 1200px;
+    padding: 0;
   }
 `;
 
@@ -22,6 +34,13 @@ const StyledList = styled.ul`
   }
   li:last-of-type {
     margin: 0;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    li {
+      margin-right: 0;
+    }
   }
 `;
 
@@ -45,6 +64,7 @@ const ContactButton = styled.button`
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0;
+  width: 106px;
 
   &::after {
     content: '';
@@ -66,6 +86,45 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 450px;
+
+  @media (min-width: 1440px) {
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
-export { HeaderWrapper, StyledList, StyledListItem, ContactButton, HeaderContainer };
+const HeaderIconButton = styled(Image)`
+  display: none;
+
+  @media (max-width: 699px) {
+    display: block;
+  }
+`;
+
+export const MobileMenu = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'isVisible',
+})<{ isVisible: boolean }>`
+  display: ${({ isVisible }) => (isVisible ? 'block' : 'none')};
+  padding-bottom: 30px;
+
+  @media (min-width: 700px) {
+    overflow: hidden;
+  }
+`;
+
+export const MobileMenuWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export {
+  HeaderWrapper,
+  StyledList,
+  StyledListItem,
+  ContactButton,
+  HeaderContainer,
+  HeaderIconButton,
+};

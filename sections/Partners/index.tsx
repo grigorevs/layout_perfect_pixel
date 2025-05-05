@@ -15,26 +15,29 @@ import {
   PartnersTitle,
   PartnersText,
   PartnersImagesBlock,
+  PartnersBlock,
 } from './index.styles';
 
 const Partners = () => {
   return (
-    <PartnersWrap>
-      <PartnersTextBlock>
-        <PartnersTitle>890+</PartnersTitle>
-        <PartnersText>some big companies that we work with, and trust us very much</PartnersText>
-      </PartnersTextBlock>
-      <PartnersImagesBlock>
-        <Image src={AirbnbLogo} alt="AirbnbLogo" />
-        <Image src={AmazonLogo} alt="AmazonLogo" />
-        <Image src={FedExLogo} alt="FedExLogo" />
-        <Image src={MicrosoftLogo} alt="MicrosoftLogo" />
-        <Image src={GoogleLogo} alt="GoogleLogo" />
-        <Image src={OLALogo} alt="OLALogo" />
-        <Image src={WalmartLogo} alt="WalmartLogo" />
-        <Image src={OYOLogo} alt="OYOLogo" />
-      </PartnersImagesBlock>
-    </PartnersWrap>
+    <PartnersBlock>
+      <PartnersWrap>
+        <PartnersTextBlock>
+          <PartnersTitle>890+</PartnersTitle>
+          <PartnersText>some big companies that we work with, and trust us very much</PartnersText>
+        </PartnersTextBlock>
+        <PartnersImagesBlock>
+          <Image src={AirbnbLogo} alt="AirbnbLogo" />
+          <Image src={AmazonLogo} alt="AmazonLogo" />
+          <Image src={FedExLogo} alt="FedExLogo" />
+          <Image src={MicrosoftLogo} alt="MicrosoftLogo" />
+          <Image src={GoogleLogo} alt="GoogleLogo" />
+          <Image src={OLALogo} alt="OLALogo" />
+          <Image src={WalmartLogo} alt="WalmartLogo" />
+          <Image src={OYOLogo} alt="OYOLogo" />
+        </PartnersImagesBlock>
+      </PartnersWrap>
+    </PartnersBlock>
   );
 };
 

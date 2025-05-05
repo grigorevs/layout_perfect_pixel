@@ -12,6 +12,8 @@ import {
   StrengthDescription,
   StrengthDescriptionText,
   StrengthDescriptionTitle,
+  VerticalLineIcon,
+  StrengthPic,
 } from './index.styles';
 
 const Strength = () => {
@@ -27,7 +29,7 @@ const Strength = () => {
           <StrengthInfoItemTitle>15+</StrengthInfoItemTitle>
           <StrengthInfoItemText>Hours of work experience</StrengthInfoItemText>
         </StrengthInfoItem>
-        <Image src={VerticalLine} alt="Line" />
+        <VerticalLineIcon src={VerticalLine} alt="Line" />
         <StrengthInfoItem>
           <StrengthInfoItemTitle>50+</StrengthInfoItemTitle>
           <StrengthInfoItemText>Creativity & passionate members</StrengthInfoItemText>
@@ -38,7 +40,7 @@ const Strength = () => {
           <StrengthInfoItemText>Integrations lorem ipsum integrations</StrengthInfoItemText>
         </StrengthInfoItem>
       </StrengthInfo>
-      <Image src={PeopleImage} alt="PeopleImage" />
+      <StrengthPic src={PeopleImage} alt="PeopleImage" />
       <StrengthDescription>
         <StrengthDescriptionTitle>
           Lift your business to new heights with our digital marketing services

@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  BackgroundBottomBlur,
   BackgroundTopBlur,
   FooterCompanyText,
   FooterCompanyTextBlock,
@@ -26,13 +25,11 @@ import Logo from '@/public/images/Logo.svg';
 import Button from '@/components/Button';
 import Image from 'next/image';
 import TopBlur from '@/public/images/home/Ellipse125.svg';
-import BottomBlur from '@/public/images/home/Ellipse124.svg';
 
 const Footer = () => {
   return (
     <FooterWrap>
       <BackgroundTopBlur src={TopBlur} alt="Blur" />
-      <BackgroundBottomBlur src={BottomBlur} alt="Blur" />
       <FooterDescriptionWrap>
         <FooterDescriptionBlock>
           <FooterTitle>Think beyond the wave</FooterTitle>

@@ -11,12 +11,13 @@ import {
   FeatureListBlock,
   FeatureListItem,
   FeatureListItemText,
+  FeatureImage,
 } from './index.styles';
 
 const Features = () => {
   return (
     <FeatureWrap>
-      <Image src={FeaturePic} alt="FeaturePic" width={585} height={651} />
+      <FeatureImage src={FeaturePic} alt="FeaturePic" />
       <FeatureBlock>
         <FeatureTitle>Passion to increase company revenue up to 85%</FeatureTitle>
         <OverviewText>

@@ -1,6 +1,7 @@
 'use client';
 
 import {
+  Icon,
   OverviewBlock,
   OverviewDetailsItem,
   OverviewDetailsItemText,
@@ -10,7 +11,6 @@ import {
   OverviewTitle,
   OverviewWrap,
 } from './index.styles';
-import Image from 'next/image';
 import IconOne from '@/public/images/home/Icon1.svg';
 import IconTwo from '@/public/images/home/Icon2.svg';
 import IconThree from '@/public/images/home/Icon3.svg';
@@ -29,7 +29,7 @@ const Overview = () => {
         </OverviewText>
         <OverviewDetailsWrap>
           <OverviewDetailsItem>
-            <Image src={IconOne} alt="Icon" />
+            <Icon src={IconOne} alt="Icon" />
             <OverviewDetailsItemTitle>Build your date fundamental</OverviewDetailsItemTitle>
             <OverviewDetailsItemText>
               Build access to date, develop valuable business insights and drive revenue while
@@ -37,7 +37,7 @@ const Overview = () => {
             </OverviewDetailsItemText>
           </OverviewDetailsItem>
           <OverviewDetailsItem>
-            <Image src={IconTwo} alt="Icon" />
+            <Icon src={IconTwo} alt="Icon" />
             <OverviewDetailsItemTitle>Measure more effective</OverviewDetailsItemTitle>
             <OverviewDetailsItemText>
               Effectively measure people-based campaigns with <br /> the freedom to choose from
@@ -45,10 +45,8 @@ const Overview = () => {
             </OverviewDetailsItemText>
           </OverviewDetailsItem>
           <OverviewDetailsItem>
-            <Image src={IconThree} alt="Icon" />
-            <OverviewDetailsItemTitle>
-              Activate your <br /> date
-            </OverviewDetailsItemTitle>
+            <Icon src={IconThree} alt="Icon" />
+            <OverviewDetailsItemTitle>Activate your date</OverviewDetailsItemTitle>
             <OverviewDetailsItemText>
               Accurately address your specific audiences at scale across any channel, platform,
               publisher or network and safely translate date between identity space to improve
@@ -56,7 +54,7 @@ const Overview = () => {
             </OverviewDetailsItemText>
           </OverviewDetailsItem>
           <OverviewDetailsItem>
-            <Image src={IconFour} alt="Icon" />
+            <Icon src={IconFour} alt="Icon" />
             <OverviewDetailsItemTitle>Strengthen consumer privacy</OverviewDetailsItemTitle>
             <OverviewDetailsItemText>
               Protect your customer date with leading privacy-preserving technologies and advanced

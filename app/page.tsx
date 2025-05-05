@@ -19,10 +19,10 @@ const Page = () => {
       <Features />
       <Strength />
       <Partners />
-      <Services />
+      {/* <Services />
       <Insight />
       <Testimonials />
-      <Footer />
+      <Footer /> */}
     </PageWrap>
   );
 };
