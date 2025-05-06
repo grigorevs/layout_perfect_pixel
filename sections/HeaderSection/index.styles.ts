@@ -5,17 +5,21 @@ export const HeaderBlock = styled.div`
   display: flex;
   position: relative;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     flex-direction: column;
     align-items: center;
     width: 100vw;
     padding: 0 20px;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     width: 1200px;
     gap: 40px;
     flex-direction: row;
-    padding-bottom: 141px;
+    padding: 0 20px 141px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 0 141px;
   }
 `;
 
@@ -25,13 +29,13 @@ export const HeaderItem = styled.div`
 
   width: 617px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     width: 100vw;
     padding: 0 20px;
     align-items: center;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     align-items: start;
   }
 `;
@@ -144,7 +148,7 @@ export const SalesReport = styled(Image)`
     width: 450px;
     margin-bottom: 176px;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     top: 115px;
     left: -3px;
     width: auto;
@@ -157,9 +161,9 @@ export const CustomerGrowth = styled(Image)`
   @media (min-width: 375px) {
     right: -260px;
     width: 200px;
-    top: -20px;
+    top: -21px;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     top: 65px;
     left: 335px;
     width: auto;
@@ -174,7 +178,7 @@ export const Sales = styled(Image)`
     width: 450px;
     top: 320px;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     top: 490px;
     left: -4px;
     width: auto;

@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
     padding: 0 20px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1440px) {
     width: 1200px;
     padding: 0;
   }
@@ -86,9 +86,6 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 450px;
-
-  @media (min-width: 1440px) {
-  }
 
   @media (max-width: 700px) {
     display: none;

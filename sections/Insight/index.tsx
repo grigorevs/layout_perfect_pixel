@@ -1,13 +1,15 @@
 'use client';
 
-import Image, { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image';
 import Picture1 from '@/public/images/home/Rectangle1.png';
 import Picture2 from '@/public/images/home/Rectangle2.png';
 import ButtonIcon from '@/public/images/home/ButtonIcon.svg';
 import {
+  InsightImage,
   InsightSlider,
   InsightSliderButton,
   InsightSliderDescriptionBlock,
+  InsightSliderIcon,
   InsightSliderItem,
   InsightSliderText,
   InsightSliderTextBlock,
@@ -64,7 +66,7 @@ const Insight = () => {
       <InsightSlider>
         {data?.map((item, index) => (
           <InsightSliderItem key={index}>
-            <Image src={item.image} alt="Pic" width={582} height={332} />
+            <InsightImage src={item.image} alt="Pic" />
             <InsightSliderTextBlock>
               <InsightSliderDescriptionBlock>
                 <InsightSliderText>{`Published in Insight ${item.date}`}</InsightSliderText>
@@ -76,7 +78,7 @@ const Insight = () => {
         ))}
         <InsightSliderButton onClick={handleClick}>
           {' '}
-          <Image src={ButtonIcon} alt="ButtonIcon" />
+          <InsightSliderIcon src={ButtonIcon} alt="ButtonIcon" />
         </InsightSliderButton>
       </InsightSlider>
     </InsightWrap>

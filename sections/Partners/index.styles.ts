@@ -7,7 +7,7 @@ export const PartnersWrap = styled.div`
     flex-direction: column;
     width: 335px;
     gap: 32px;
-    margin-bottom: 56px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: 1200px) {

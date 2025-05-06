@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import FeaturePic from '@/public/images/home/Image.svg';
+import FeaturePic from '@/public/images/home/Statistic.png';
 import Icon from '@/public/images/home/ApplyIcon.svg';
 import {
   FeatureWrap,

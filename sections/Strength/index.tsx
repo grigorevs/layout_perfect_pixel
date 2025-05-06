@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import VerticalLine from '@/public/images/home/Line65.svg';
-import PeopleImage from '@/public/images/home/ImagePeople.svg';
+import PeopleImage from '@/public/images/home/ImagePeople.png';
 import {
   StrengthWrap,
   StrengthInfo,
