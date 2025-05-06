@@ -66,14 +66,16 @@ const Insight = () => {
       <InsightSlider>
         {data?.map((item, index) => (
           <InsightSliderItem key={index}>
-            <InsightImage src={item.image} alt="Pic" />
-            <InsightSliderTextBlock>
-              <InsightSliderDescriptionBlock>
-                <InsightSliderText>{`Published in Insight ${item.date}`}</InsightSliderText>
-                <InsightSliderText>{`by : ${item.author}`}</InsightSliderText>
-              </InsightSliderDescriptionBlock>
-              <InsightSliderTitle>{item.title}</InsightSliderTitle>
-            </InsightSliderTextBlock>
+            <>
+              <InsightImage src={item.image} alt="Pic" />
+              <InsightSliderTextBlock>
+                <InsightSliderDescriptionBlock>
+                  <InsightSliderText>{`Published in Insight ${item.date}`}</InsightSliderText>
+                  <InsightSliderText>{`by : ${item.author}`}</InsightSliderText>
+                </InsightSliderDescriptionBlock>
+                <InsightSliderTitle>{item.title}</InsightSliderTitle>
+              </InsightSliderTextBlock>
+            </>
           </InsightSliderItem>
         ))}
         <InsightSliderButton onClick={handleClick}>

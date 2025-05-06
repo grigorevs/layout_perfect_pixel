@@ -87,17 +87,25 @@ export const InsightSlider = styled.div`
   display: flex;
   position: relative;
 
-  @media (max-width: 1200px) {
-    justify-content: center;
+  @media (max-width: 650px) {
     right: -140px;
     gap: 16px;
     width: 335px;
+    justify-content: center;
+  }
+
+  @media (min-width: 650px) {
+    right: 2px;
+    gap: 16px;
+    width: 335px;
+    justify-content: center;
   }
 
   @media (min-width: 1200px) {
     justify-content: space-between;
     width: 1200px;
     gap: 0;
+    right: 0;
   }
 `;
 

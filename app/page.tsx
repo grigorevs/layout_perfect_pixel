@@ -21,8 +21,8 @@ const Page = () => {
       <Partners />
       <Services />
       <Insight />
-      {/* <Testimonials /> */}
-      {/* <Footer /> */}
+      <Testimonials />
+      <Footer />
     </PageWrap>
   );
 };

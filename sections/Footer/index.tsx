@@ -1,7 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import {
   BackgroundTopBlur,
+  FooterButtonWrap,
   FooterCompanyText,
   FooterCompanyTextBlock,
   FooterCopyright,
@@ -15,6 +17,11 @@ import {
   FooterListItem,
   FooterListTitle,
   FooterListWrap,
+  FooterLogoIcon,
+  FooterMobileLink,
+  FooterMobileLinksList,
+  FooterMobileLinksWrap,
+  FooterSocialsImagesWrap,
   FooterText,
   FooterTitle,
   FooterWrap,
@@ -23,8 +30,11 @@ import {
 import Line from '@/public/images/home/Line.svg';
 import Logo from '@/public/images/Logo.svg';
 import Button from '@/components/Button';
-import Image from 'next/image';
 import TopBlur from '@/public/images/home/Ellipse125.svg';
+import FacebookLogo from '@/public/images/home/Facebook.svg';
+import TwitterLogo from '@/public/images/home/Twitter.svg';
+import InstagramLogo from '@/public/images/home/Instagram.svg';
+import LinkedinLogo from '@/public/images/home/Linkedin.svg';
 
 const Footer = () => {
   return (
@@ -41,11 +51,13 @@ const Footer = () => {
             </FooterText>
           </FooterDescription>
         </FooterDescriptionBlock>
-        <Button>Try for free</Button>
+        <FooterButtonWrap>
+          <Button>Try for free</Button>
+        </FooterButtonWrap>
       </FooterDescriptionWrap>
       <FooterLinkstWrap>
         <FooterCompanyTextBlock>
-          <Image src={Logo} alt="Logo" />
+          <FooterLogoIcon src={Logo} alt="Logo" />
           <FooterCompanyText>
             We built an elegant solution. Our team created a fully integrated sales and marketing
             solution for SMBs
@@ -91,6 +103,19 @@ const Footer = () => {
         </FooterListWrap>
       </FooterLinkstWrap>
       <FooterCopyright>
+        <FooterMobileLinksWrap>
+          <FooterSocialsImagesWrap>
+            <Image src={FacebookLogo} alt="FacebookLogo" />
+            <Image src={TwitterLogo} alt="TwitterLogo" />
+            <Image src={InstagramLogo} alt="InstagramLogo" />
+            <Image src={LinkedinLogo} alt="LinkedinLogo" />
+          </FooterSocialsImagesWrap>
+          <FooterMobileLinksList>
+            <FooterMobileLink>Privacy Policy</FooterMobileLink>
+            <FooterMobileLink>Terms & Conditions</FooterMobileLink>
+            <FooterMobileLink>Support</FooterMobileLink>
+          </FooterMobileLinksList>
+        </FooterMobileLinksWrap>
         <FooterCopyrightText>© Copyright 2023 All Rights Reserved</FooterCopyrightText>
       </FooterCopyright>
     </FooterWrap>
