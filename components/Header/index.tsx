@@ -7,13 +7,12 @@ import {
   HeaderWrapper,
   MobileMenu,
   MobileMenuWrap,
-  StyledList,
-  StyledListItem,
 } from './index.styles';
 import Image from 'next/image';
 import Logo from '../../public/images/Logo.svg';
 import IconButton from '../../public/images/home/HeaderButtonIcon.svg';
 import { useState } from 'react';
+import RoutingList from '../RoutingList';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,12 +22,7 @@ const Header = () => {
       <HeaderWrapper>
         <Image src={Logo} alt="Logo" />
         <HeaderContainer>
-          <StyledList>
-            <StyledListItem>Home</StyledListItem>
-            <StyledListItem>About</StyledListItem>
-            <StyledListItem>Blog</StyledListItem>
-            <StyledListItem>Pricing</StyledListItem>
-          </StyledList>
+          <RoutingList />
           <ContactButton>Contact Us →</ContactButton>
         </HeaderContainer>
         <HeaderIconButton
@@ -39,12 +33,7 @@ const Header = () => {
       </HeaderWrapper>
       <MobileMenu isVisible={isVisible}>
         <MobileMenuWrap>
-          <StyledList>
-            <StyledListItem>Home</StyledListItem>
-            <StyledListItem>About</StyledListItem>
-            <StyledListItem>Blog</StyledListItem>
-            <StyledListItem>Pricing</StyledListItem>
-          </StyledList>
+          <RoutingList />
           <ContactButton>Contact Us →</ContactButton>
         </MobileMenuWrap>
       </MobileMenu>

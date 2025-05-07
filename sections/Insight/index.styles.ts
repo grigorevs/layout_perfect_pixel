@@ -72,6 +72,8 @@ export const InsightText = styled.p`
 `;
 
 export const InsightImage = styled(Image)`
+  object-fit: cover;
+
   @media (max-width: 1200px) {
     width: 299px;
     height: 191px;
@@ -123,7 +125,7 @@ export const InsightSliderItem = styled.div`
 
 export const InsightSliderButton = styled.button`
   position: absolute;
-
+  cursor: pointer;
   border: none;
   background-color: #ffffff;
   border-radius: 50%;

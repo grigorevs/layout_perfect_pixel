@@ -14,42 +14,13 @@ const HeaderWrapper = styled.div`
 
   @media (min-width: 400px) {
     padding: 0 20px;
+    width: 100vw;
   }
 
   @media (min-width: 1440px) {
     width: 1200px;
     padding: 0;
   }
-`;
-
-const StyledList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  li {
-    margin-right: 32px;
-  }
-  li:last-of-type {
-    margin: 0;
-  }
-
-  @media (max-width: 700px) {
-    flex-direction: column;
-    li {
-      margin-right: 0;
-    }
-  }
-`;
-
-const StyledListItem = styled.li`
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0;
-  color: #1d1e25;
 `;
 
 const ContactButton = styled.button`
@@ -64,7 +35,7 @@ const ContactButton = styled.button`
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0;
-  width: 106px;
+  font-family: 'Inter-Bold';
 
   &::after {
     content: '';
@@ -117,11 +88,4 @@ export const MobileMenuWrap = styled.div`
   align-items: center;
 `;
 
-export {
-  HeaderWrapper,
-  StyledList,
-  StyledListItem,
-  ContactButton,
-  HeaderContainer,
-  HeaderIconButton,
-};
+export { HeaderWrapper, ContactButton, HeaderContainer, HeaderIconButton };

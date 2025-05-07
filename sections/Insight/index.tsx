@@ -3,6 +3,7 @@
 import { StaticImageData } from 'next/image';
 import Picture1 from '@/public/images/home/Rectangle1.png';
 import Picture2 from '@/public/images/home/Rectangle2.png';
+import Picture3 from '@/public/images/home/ImagePeople.png';
 import ButtonIcon from '@/public/images/home/ButtonIcon.svg';
 import {
   InsightImage,
@@ -41,6 +42,12 @@ const postData = [
     date: 'Jan 30, 2021',
     author: 'Albert Sans',
   },
+  {
+    image: Picture3,
+    title: 'Our good team can resolve any problem and we can help you too!',
+    date: 'Jul 05, 2025',
+    author: 'Albert Sans',
+  },
 ];
 
 const Insight = () => {
@@ -57,6 +64,8 @@ const Insight = () => {
     }
   };
 
+  const displayedData = data.slice(0, 2);
+
   return (
     <InsightWrap>
       <InsightTextBlock>
@@ -64,7 +73,7 @@ const Insight = () => {
         <InsightText>we have some new Service to pamper you</InsightText>
       </InsightTextBlock>
       <InsightSlider>
-        {data?.map((item, index) => (
+        {displayedData?.map((item, index) => (
           <InsightSliderItem key={index}>
             <>
               <InsightImage src={item.image} alt="Pic" />
