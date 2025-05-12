@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import {
   BackgroundTopBlur,
@@ -25,75 +26,84 @@ import {
   FooterText,
   FooterTitle,
   FooterWrap,
-  LineImage,
 } from './index.styles';
-import Line from '@/public/images/home/Line.svg';
 import Logo from '@/public/images/Logo.svg';
+import LogoDarkTheme from '@/public/images/about/LogoDarkTheme.svg';
 import Button from '@/components/Button';
 import TopBlur from '@/public/images/home/Ellipse125.svg';
 import FacebookLogo from '@/public/images/home/Facebook.svg';
 import TwitterLogo from '@/public/images/home/Twitter.svg';
 import InstagramLogo from '@/public/images/home/Instagram.svg';
 import LinkedinLogo from '@/public/images/home/Linkedin.svg';
+import FacebookLogoDark from '@/public/images/home/FacebookDark.svg';
+import TwitterLogoDark from '@/public/images/home/TwitterDark.svg';
+import InstagramLogoDark from '@/public/images/home/InstagramDark.svg';
+import LinkedinLogoDark from '@/public/images/home/LinkedinDark.svg';
+import { LineBlock } from './index.styles';
 
-const Footer = () => {
+interface FooterProps {
+  theme: 'light' | 'dark';
+}
+
+const Footer: React.FC<FooterProps> = ({ theme }) => {
   return (
-    <FooterWrap>
-      <BackgroundTopBlur src={TopBlur} alt="Blur" />
+    <FooterWrap backgroundColor={theme}>
+      {theme === 'light' && <BackgroundTopBlur src={TopBlur} alt="Blur" />}
+
       <FooterDescriptionWrap>
         <FooterDescriptionBlock>
           <FooterTitle>Think beyond the wave</FooterTitle>
           <FooterDescription>
-            <LineImage src={Line} alt="Line" />
-            <FooterText>
+            <LineBlock color={theme} />
+            <FooterText textColor={theme}>
               Ask about Sans products, pricing, implementation, or anything else. Our highly trained
               reps are standing by, ready to help
             </FooterText>
           </FooterDescription>
         </FooterDescriptionBlock>
         <FooterButtonWrap>
-          <Button>Try for free</Button>
+          <Button theme={theme}>Try for free</Button>
         </FooterButtonWrap>
       </FooterDescriptionWrap>
       <FooterLinkstWrap>
         <FooterCompanyTextBlock>
-          <FooterLogoIcon src={Logo} alt="Logo" />
-          <FooterCompanyText>
+          <FooterLogoIcon src={theme === 'light' ? Logo : LogoDarkTheme} alt="Logo" />
+          <FooterCompanyText textColor={theme}>
             We built an elegant solution. Our team created a fully integrated sales and marketing
             solution for SMBs
           </FooterCompanyText>
         </FooterCompanyTextBlock>
         <FooterListWrap>
-          <FooterListBlock>
+          <FooterListBlock textColor={theme}>
             <FooterListTitle>Company</FooterListTitle>
-            <FooterList>
+            <FooterList textColor={theme}>
               <FooterListItem>About</FooterListItem>
               <FooterListItem>Pricing</FooterListItem>
               <FooterListItem>Jobs</FooterListItem>
               <FooterListItem>Blog</FooterListItem>
             </FooterList>
           </FooterListBlock>
-          <FooterListBlock>
+          <FooterListBlock textColor={theme}>
             <FooterListTitle>Product</FooterListTitle>
-            <FooterList>
+            <FooterList textColor={theme}>
               <FooterListItem>Sales Software</FooterListItem>
               <FooterListItem>Marketplace</FooterListItem>
               <FooterListItem>Terms & Conditions</FooterListItem>
               <FooterListItem>Privacy Policy</FooterListItem>
             </FooterList>
           </FooterListBlock>
-          <FooterListBlock>
+          <FooterListBlock textColor={theme}>
             <FooterListTitle>Discover</FooterListTitle>
-            <FooterList>
+            <FooterList textColor={theme}>
               <FooterListItem>CRM Comparision</FooterListItem>
               <FooterListItem>Partner Program</FooterListItem>
               <FooterListItem>What is CRM</FooterListItem>
               <FooterListItem>Resource</FooterListItem>
             </FooterList>
           </FooterListBlock>
-          <FooterListBlock>
+          <FooterListBlock textColor={theme}>
             <FooterListTitle>Help Center</FooterListTitle>
-            <FooterList>
+            <FooterList textColor={theme}>
               <FooterListItem>Community</FooterListItem>
               <FooterListItem>Knowledge Base</FooterListItem>
               <FooterListItem>Academy</FooterListItem>
@@ -105,10 +115,13 @@ const Footer = () => {
       <FooterCopyright>
         <FooterMobileLinksWrap>
           <FooterSocialsImagesWrap>
-            <Image src={FacebookLogo} alt="FacebookLogo" />
-            <Image src={TwitterLogo} alt="TwitterLogo" />
-            <Image src={InstagramLogo} alt="InstagramLogo" />
-            <Image src={LinkedinLogo} alt="LinkedinLogo" />
+            <Image src={theme === 'light' ? FacebookLogo : FacebookLogoDark} alt="FacebookLogo" />
+            <Image src={theme === 'light' ? TwitterLogo : TwitterLogoDark} alt="TwitterLogo" />
+            <Image
+              src={theme === 'light' ? InstagramLogo : InstagramLogoDark}
+              alt="InstagramLogo"
+            />
+            <Image src={theme === 'light' ? LinkedinLogo : LinkedinLogoDark} alt="LinkedinLogo" />
           </FooterSocialsImagesWrap>
           <FooterMobileLinksList>
             <FooterMobileLink>Privacy Policy</FooterMobileLink>

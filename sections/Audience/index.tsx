@@ -48,7 +48,7 @@ const Audience = () => {
             Over the years at Sans, we’ve put a lot of thought into what it is that makes us who we
             are. The qualities that unite us, that make us such an effective team, and...
           </AudiencePicText>
-          <Button>See Details →</Button>
+          <Button theme="light">See Details →</Button>
         </AudienceDetailsBlock>
         <AudiencePic src={Pic3} alt="Pic3" width={252} height={460} />
       </AudiencePicBlock>

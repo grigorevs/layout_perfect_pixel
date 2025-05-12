@@ -109,6 +109,7 @@ export const TeamSlider = styled.div`
   @media (min-width: 1200px) {
     gap: 32px;
     padding: 80px 0 100px;
+    width: 1200px;
   }
 `;
 
@@ -123,7 +124,7 @@ export const SliderButton = styled.button`
     width: 40px;
     height: 40px;
     top: 132px;
-    left: 235px;
+    left: 15px;
   }
 
   @media (min-width: 1200px) {

@@ -22,7 +22,7 @@ const Page = () => {
       <Services />
       <Insight />
       <Testimonials />
-      <Footer />
+      <Footer theme={'light'} />
     </PageWrap>
   );
 };

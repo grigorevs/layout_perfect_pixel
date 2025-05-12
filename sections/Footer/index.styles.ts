@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
-export const FooterWrap = styled.div`
+export const FooterWrap = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'backgroundColor',
+})<{ backgroundColor: string }>`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: ${({ backgroundColor }) => backgroundColor === 'dark' && '#1D1E25'};
 
   @media (max-width: 1200px) {
     margin-top: 51px;
@@ -13,6 +16,7 @@ export const FooterWrap = styled.div`
 
   @media (min-width: 1200px) {
     margin-top: 112px;
+    width: 100vw;
   }
 `;
 
@@ -28,6 +32,7 @@ export const FooterDescriptionWrap = styled.div`
 
   @media (min-width: 1200px) {
     width: 1200px;
+    /* width: 100vw; */
     align-items: center;
     justify-content: space-between;
   }
@@ -90,11 +95,12 @@ export const FooterTitle = styled.h1`
   }
 `;
 
-export const FooterText = styled.p`
+export const FooterText = styled.p.withConfig({
+  shouldForwardProp: (prop) => !['textColor'].includes(prop),
+})<{ textColor: 'light' | 'dark' }>`
   font-family: 'Inter-SemiBold';
   font-weight: 600;
-  color: #1d1e25;
-
+  color: ${({ textColor }) => (textColor === 'dark' ? '#FFFFFF' : '#1D1E25')};
   @media (max-width: 1200px) {
     font-size: 16px;
     line-height: 24px;
@@ -107,6 +113,23 @@ export const FooterText = styled.p`
     line-height: 35px;
     letter-spacing: 0;
     width: 543px;
+  }
+`;
+
+export const LineBlock = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'color',
+})<{ color: string }>`
+  background-color: ${({ color }) => (color === 'dark' ? '#FFFFFF' : '#000000')};
+  height: 1px;
+
+  @media (max-width: 1200px) {
+    width: 24px;
+    margin-top: 12px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 76px;
+    margin-top: 10px;
   }
 `;
 
@@ -134,7 +157,9 @@ export const FooterLogoIcon = styled(Image)`
   }
 `;
 
-export const FooterCompanyText = styled.p`
+export const FooterCompanyText = styled.p.withConfig({
+  shouldForwardProp: (prop) => !['textColor'].includes(prop),
+})<{ textColor: 'light' | 'dark' }>`
   font-family: 'Inter-Medium';
   font-weight: 500;
 
@@ -147,7 +172,7 @@ export const FooterCompanyText = styled.p`
   }
 
   @media (min-width: 1200px) {
-    color: #1d1e25;
+    color: ${({ textColor }) => (textColor === 'dark' ? '#7E8492' : '#1D1E25')};
     width: 292px;
     font-size: 16px;
     line-height: 26px;
@@ -182,36 +207,46 @@ export const FooterListWrap = styled.div`
   }
 `;
 
-export const FooterListBlock = styled.div`
+export const FooterListBlock = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'textColor',
+})<{ textColor: string }>`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  h3 {
+    color: ${({ textColor }) => (textColor === 'dark' ? '#FFFFFF' : '#1D1E25')};
+  }
 `;
 
-export const FooterList = styled.ul`
+export const FooterList = styled.ul.withConfig({
+  shouldForwardProp: (prop) => prop !== 'textColor',
+})<{ textColor: string }>`
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  p {
+    color: ${({ textColor }) => (textColor === 'dark' ? '#7E8492' : '#1D1E25')};
+  }
 `;
 
-export const FooterListItem = styled.a`
+export const FooterListItem = styled.p`
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0;
-  color: #1d1e25;
   font-weight: 400;
   font-family: 'Inter';
   text-decoration: none;
 `;
 
-export const FooterListTitle = styled.a`
+export const FooterListTitle = styled.h3`
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0;
-  color: #1d1e25;
   font-weight: 700;
   font-family: 'Inter-SemiBold';
 `;

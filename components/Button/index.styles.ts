@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
-  background-color: #1d1e25;
+export const StyledButton = styled.button<{ buttonTheme: 'light' | 'dark' }>`
+  background-color: ${({ buttonTheme }) => (buttonTheme === 'dark' ? '#FFFFFF' : '#1d1e25')};
+  font-family: 'Inter-SemiBold';
+  font-weight: 600;
   border-radius: 100px;
   border: none;
   width: 175px;
   height: 56px;
-  color: #ffffff;
-  font-family: 'Inter-Bold';
+  color: ${({ buttonTheme }) => (buttonTheme === 'dark' ? '#1D1E25' : '#ffffff')};
   font-size: 16px;
   line-height: 25px;
   letter-spacing: 0;

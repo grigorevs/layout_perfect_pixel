@@ -40,7 +40,7 @@ const HeaderSection = () => {
         </HeaderDescription>
         <HeaderInputBlock>
           <HeaderInput type="email" placeholder="Enter your email" />
-          <Button>Try for free</Button>
+          <Button theme="light">Try for free</Button>
         </HeaderInputBlock>
       </HeaderItem>
       <HeaderImagesBlock>

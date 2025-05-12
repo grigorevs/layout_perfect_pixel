@@ -13,7 +13,7 @@ const RoutingList = () => {
       <StyledListItem onClick={() => navigateTo('/')}>Home</StyledListItem>
       <StyledListItem onClick={() => navigateTo('/about')}>About</StyledListItem>
       <StyledListItem>Blog</StyledListItem>
-      <StyledListItem>Pricing</StyledListItem>
+      <StyledListItem onClick={() => navigateTo('/pricing')}>Pricing</StyledListItem>
     </StyledList>
   );
 };
