@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button<{ buttonTheme: 'light' | 'dark' }>`
+export const StyledButton = styled.button.withConfig({
+  shouldForwardProp: (buttonTheme) => buttonTheme !== 'buttonTheme',
+})<{ buttonTheme: string }>`
   background-color: ${({ buttonTheme }) => (buttonTheme === 'dark' ? '#FFFFFF' : '#1d1e25')};
   font-family: 'Inter-SemiBold';
   font-weight: 600;

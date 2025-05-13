@@ -3,13 +3,30 @@ import styled from 'styled-components';
 export const ListItemWrap = styled.div`
   display: flex;
   gap: 8px;
+
+  @media (max-width: 1200px) {
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
 `;
 
-export const ListItemText = styled.p<{ disabledStyle: 'boolean' }>`
+export const ListItemText = styled.p.withConfig({
+  shouldForwardProp: (disabledStyle) => disabledStyle !== 'disabledStyle',
+})<{ disabledStyle: boolean }>`
   color: ${({ disabledStyle }) => (disabledStyle ? '#7E8492' : '#1D1E25')};
   font-family: 'Inter-Medium';
   font-weight: '500';
-  font-size: '16px';
-  line-height: '26px';
   text-decoration: ${({ disabledStyle }) => (disabledStyle ? 'line-through' : 'none')};
+
+  @media (max-width: 1200px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 26px;
+  }
 `;

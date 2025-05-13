@@ -32,7 +32,6 @@ export const FooterDescriptionWrap = styled.div`
 
   @media (min-width: 1200px) {
     width: 1200px;
-    /* width: 100vw; */
     align-items: center;
     justify-content: space-between;
   }
