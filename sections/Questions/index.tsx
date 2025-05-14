@@ -12,6 +12,7 @@ import {
   QuestionsText,
   QuestionsTextBlock,
   QuestionsTitle,
+  QuestionsWrap,
 } from './index.styles';
 import Image from 'next/image';
 
@@ -23,7 +24,7 @@ const Accordion = () => {
   };
 
   return (
-    <>
+    <QuestionsWrap>
       <QuestionsTextBlock>
         <QuestionsTitle>Frequently asked questions</QuestionsTitle>
         <QuestionsText>Everything you need to know about the product and billing.</QuestionsText>
@@ -32,14 +33,14 @@ const Accordion = () => {
         {faqItems.map((item, index) => (
           <AccordionItem key={index}>
             <Question isOpen={activeIndex === index} onClick={() => toggleItem(index)}>
-              {item.question}
+              <p>{item.question}</p>
               <Image src={activeIndex === index ? IconMinus : IconPlus} alt={''} />
             </Question>
             <Answer isOpen={activeIndex === index}>{item.answer}</Answer>
           </AccordionItem>
         ))}
       </AccordionContainer>
-    </>
+    </QuestionsWrap>
   );
 };
 

@@ -11,6 +11,7 @@ export default [
       parser: typescriptEslintParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
+      browser: true,
     },
     plugins: {
       '@typescript-eslint': typescriptEslintPlugin,

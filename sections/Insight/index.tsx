@@ -4,13 +4,10 @@ import { StaticImageData } from 'next/image';
 import Picture1 from '@/public/images/home/Rectangle1.png';
 import Picture2 from '@/public/images/home/Rectangle2.png';
 import Picture3 from '@/public/images/home/ImagePeople.png';
-import ButtonIcon from '@/public/images/home/ButtonIcon.svg';
 import {
   InsightImage,
   InsightSlider,
-  InsightSliderButton,
   InsightSliderDescriptionBlock,
-  InsightSliderIcon,
   InsightSliderItem,
   InsightSliderText,
   InsightSliderTextBlock,
@@ -20,7 +17,7 @@ import {
   InsightTitle,
   InsightWrap,
 } from './index.styles';
-import { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 interface Data {
   image: string | StaticImageData;
@@ -51,20 +48,41 @@ const postData = [
 ];
 
 const Insight = () => {
-  const [data, setData] = useState<Data[]>(postData);
+  const [data] = useState<Data[]>(postData);
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-  const handleClick = () => {
-    if (!data || data.length === 0) return;
+  const onMouseDown = (e: React.MouseEvent) => {
+    if (!sliderRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - sliderRef.current.offsetLeft);
+    setScrollLeft(sliderRef.current.scrollLeft);
+    sliderRef.current.style.cursor = 'grabbing';
+  };
 
-    const newData = [...data];
-    const firstItem = newData.shift();
-    if (firstItem) {
-      newData.push(firstItem);
-      setData(newData);
+  const onMouseLeave = () => {
+    setIsDragging(false);
+    if (sliderRef.current) {
+      sliderRef.current.style.cursor = 'grab';
     }
   };
 
-  const displayedData = data.slice(0, 2);
+  const onMouseUp = () => {
+    setIsDragging(false);
+    if (sliderRef.current) {
+      sliderRef.current.style.cursor = 'grab';
+    }
+  };
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !sliderRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - sliderRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    sliderRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   return (
     <InsightWrap>
@@ -72,8 +90,14 @@ const Insight = () => {
         <InsightTitle>Trending news from Coca</InsightTitle>
         <InsightText>we have some new Service to pamper you</InsightText>
       </InsightTextBlock>
-      <InsightSlider>
-        {displayedData?.map((item, index) => (
+      <InsightSlider
+        ref={sliderRef}
+        onMouseDown={onMouseDown}
+        onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
+        onMouseMove={onMouseMove}
+      >
+        {data?.map((item, index) => (
           <InsightSliderItem key={index}>
             <>
               <InsightImage src={item.image} alt="Pic" />
@@ -87,10 +111,6 @@ const Insight = () => {
             </>
           </InsightSliderItem>
         ))}
-        <InsightSliderButton onClick={handleClick}>
-          {' '}
-          <InsightSliderIcon src={ButtonIcon} alt="ButtonIcon" />
-        </InsightSliderButton>
       </InsightSlider>
     </InsightWrap>
   );

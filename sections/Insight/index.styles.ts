@@ -88,38 +88,44 @@ export const InsightImage = styled(Image)`
 export const InsightSlider = styled.div`
   display: flex;
   position: relative;
-
-  @media (max-width: 650px) {
-    right: -140px;
-    gap: 16px;
-    width: 335px;
-    justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
+  scroll-behavior: smooth;
 
-  @media (min-width: 650px) {
-    right: 2px;
+  @media (min-width: 375px) {
+    scroll-snap-type: x proximity;
+    left: 25px;
     gap: 16px;
-    width: 335px;
-    justify-content: center;
+    width: 375px;
   }
 
   @media (min-width: 1200px) {
     justify-content: space-between;
     width: 1200px;
-    gap: 0;
-    right: 0;
+    gap: 32px;
+    left: 0;
   }
 `;
 
 export const InsightSliderItem = styled.div`
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  display: flex;
   flex-direction: column;
+  transition: transform 0.7s ease;
 
-  @media (max-width: 1200px) {
-    width: 299px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 582px;
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
   }
 `;
 

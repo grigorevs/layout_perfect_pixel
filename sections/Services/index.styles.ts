@@ -90,7 +90,6 @@ export const ServicesContentBlock = styled.div`
     gap: 0;
     column-gap: 64px;
     row-gap: 56px;
-    /* width: 1200px; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;

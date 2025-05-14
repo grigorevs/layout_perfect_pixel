@@ -13,9 +13,15 @@ import Logo from '../../public/images/Logo.svg';
 import IconButton from '../../public/images/home/HeaderButtonIcon.svg';
 import { useState } from 'react';
 import RoutingList from '../RoutingList';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
+
+  const navigateTo = (path: string) => {
+    router.push(path);
+  };
 
   return (
     <>
@@ -23,7 +29,7 @@ const Header = () => {
         <Image src={Logo} alt="Logo" />
         <HeaderContainer>
           <RoutingList />
-          <ContactButton>Contact Us →</ContactButton>
+          <ContactButton onClick={() => navigateTo('/contact')}>Contact Us →</ContactButton>
         </HeaderContainer>
         <HeaderIconButton
           src={IconButton}
@@ -34,7 +40,7 @@ const Header = () => {
       <MobileMenu isVisible={isVisible}>
         <MobileMenuWrap>
           <RoutingList />
-          <ContactButton>Contact Us →</ContactButton>
+          <ContactButton onClick={() => navigateTo('/contact')}>Contact Us →</ContactButton>
         </MobileMenuWrap>
       </MobileMenu>
     </>

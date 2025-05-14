@@ -15,8 +15,6 @@ export const PartnersWrap = styled.div`
     justify-content: center;
     gap: 40px;
     width: 1200px;
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
   }
 `;
 
@@ -44,7 +42,7 @@ export const PartnersTitle = styled.h1`
 
   @media (max-width: 1200px) {
     font-size: 24px;
-    line-height: 32зч;
+    line-height: 32px;
     letter-spacing: 0;
   }
 
