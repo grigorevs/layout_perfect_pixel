@@ -11,7 +11,11 @@ export default [
       parser: typescriptEslintParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
-      browser: true,
+      globals: {
+        HTMLDivElement: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescriptEslintPlugin,
