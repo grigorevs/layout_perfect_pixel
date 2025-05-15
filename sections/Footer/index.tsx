@@ -52,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
 
       <FooterDescriptionWrap>
         <FooterDescriptionBlock>
-          <FooterTitle>Think beyond the wave</FooterTitle>
+          <FooterTitle color={theme}>Think beyond the wave</FooterTitle>
           <FooterDescription>
             <LineBlock color={theme} />
             <FooterText textColor={theme}>

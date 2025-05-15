@@ -10,12 +10,7 @@ export const FooterWrap = styled.div.withConfig({
   align-items: center;
   background-color: ${({ backgroundColor }) => backgroundColor === 'dark' && '#1D1E25'};
 
-  @media (max-width: 1200px) {
-    margin-top: 51px;
-  }
-
   @media (min-width: 1200px) {
-    margin-top: 112px;
     width: 100vw;
   }
 `;
@@ -76,21 +71,25 @@ export const LineImage = styled(Image)`
   }
 `;
 
-export const FooterTitle = styled.h1`
+export const FooterTitle = styled.h1.withConfig({
+  shouldForwardProp: (prop) => prop !== 'color',
+})<{ color: string }>`
+  color: ${({ color }) => (color === 'dark' ? '#FFFFFF' : '#1d1e25')};
   font-family: 'Inter-Medium';
-  color: #1d1e25;
   font-weight: 600;
   letter-spacing: 0;
 
   @media (max-width: 1200px) {
     font-size: 24px;
     line-height: 34px;
+    padding-top: 51px;
   }
 
   @media (min-width: 1200px) {
     font-size: 64px;
     line-height: 120%;
     width: 720px;
+    padding-top: 112px;
   }
 `;
 
