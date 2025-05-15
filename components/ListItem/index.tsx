@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Check from '../../public/images/pricing/Check.svg';
-import CheckDisabled from '../../public/images/pricing/CheckDisabled.svg';
+import Check from '@/public/images/pricing/Check.svg';
+import CheckDisabled from '@/public/images/pricing/CheckDisabled.svg';
 import { ListItemWrap, ListItemText } from './index.styles';
 
 type ListItemProps = {

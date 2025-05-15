@@ -21,10 +21,10 @@ import {
   BackgroundYellowBlur,
 } from './index.styles';
 import Image from 'next/image';
-import StarterIcon from '../../public/images/pricing/HeartIcon.svg';
-import PopularIcon from '../../public/images/pricing/TopIcon.svg';
-import EnterpriseIcon from '../../public/images/pricing/PremiumIcon.svg';
-import ToggleIcon from '../../public/images/pricing/Toggle.svg';
+import StarterIcon from '@/public/images/pricing/HeartIcon.svg';
+import PopularIcon from '@/public/images/pricing/TopIcon.svg';
+import EnterpriseIcon from '@/public/images/pricing/PremiumIcon.svg';
+import ToggleIcon from '@/public/images/pricing/Toggle.svg';
 import YellowBlur from '@/public/images/home/Ellipse125.svg';
 import GreenBlur from '@/public/images/home/Ellipse124.svg';
 import ListItem from '@/components/ListItem';

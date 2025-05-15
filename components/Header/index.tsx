@@ -9,8 +9,8 @@ import {
   MobileMenuWrap,
 } from './index.styles';
 import Image from 'next/image';
-import Logo from '../../public/images/Logo.svg';
-import IconButton from '../../public/images/home/HeaderButtonIcon.svg';
+import Logo from '@/public/images/Logo.svg';
+import IconButton from '@/public/images/home/HeaderButtonIcon.svg';
 import { useState } from 'react';
 import RoutingList from '../RoutingList';
 import { useRouter } from 'next/navigation';

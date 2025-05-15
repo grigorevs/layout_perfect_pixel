@@ -1,10 +1,10 @@
 'use client';
 
 import Button from '@/components/Button';
-import Logo from '../../public/images/about/LinkedPath.svg';
-import Pic1 from '../../public/images/about/AudiencePic1.png';
-import Pic2 from '../../public/images/about/AudiencePic2.png';
-import Pic3 from '../../public/images/about/AudiencePic3.png';
+import Pic1 from '@/public/images/about/AudiencePic1.png';
+import Pic2 from '@/public/images/about/AudiencePic2.png';
+import Pic3 from '@/public/images/about/AudiencePic3.png';
+import Logo from '@/public/images/about/LinkedPath.svg';
 import {
   AudienceBlock,
   AudienceDetailsBlock,

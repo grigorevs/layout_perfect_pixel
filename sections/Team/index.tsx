@@ -2,14 +2,14 @@
 
 import { useState } from 'react';
 import { StaticImageData } from 'next/image';
-import Pic1 from '../../public/images/about/Team1.png';
-import Pic2 from '../../public/images/about/Team2.png';
-import Pic3 from '../../public/images/about/Team3.png';
-import Pic4 from '../../public/images/about/Team4.png';
+import Pic1 from '@/public/images/about/Team1.png';
+import Pic2 from '@/public/images/about/Team2.png';
+import Pic3 from '@/public/images/about/Team3.png';
+import Pic4 from '@/public/images/about/Team4.png';
 import ButtonIcon from '@/public/images/home/ButtonIcon.svg';
-import TwitterLogo from '../../public/images/about/Twitter.svg';
-import LinkedinLogo from '../../public/images/about/Linkedin.svg';
-import InstagramLogo from '../../public/images/about/Instagram.svg';
+import TwitterLogo from '@/public/images/about/Twitter.svg';
+import LinkedinLogo from '@/public/images/about/Linkedin.svg';
+import InstagramLogo from '@/public/images/about/Instagram.svg';
 import {
   SliderButton,
   SliderIcon,
