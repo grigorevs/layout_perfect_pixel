@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import IconMinus from '@/public/images/pricing/IconMinus.svg';
 import IconPlus from '@/public/images/pricing/IconPlus.svg';
-import { faqItems } from './mockData';
+import { faqItems } from './data';
 import {
   AccordionContainer,
   AccordionItem,

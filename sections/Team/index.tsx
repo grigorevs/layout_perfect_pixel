@@ -6,13 +6,10 @@ import Pic1 from '@/public/images/about/Team1.png';
 import Pic2 from '@/public/images/about/Team2.png';
 import Pic3 from '@/public/images/about/Team3.png';
 import Pic4 from '@/public/images/about/Team4.png';
-import ButtonIcon from '@/public/images/home/ButtonIcon.svg';
 import TwitterLogo from '@/public/images/about/Twitter.svg';
 import LinkedinLogo from '@/public/images/about/Linkedin.svg';
 import InstagramLogo from '@/public/images/about/Instagram.svg';
 import {
-  SliderButton,
-  SliderIcon,
   SocialMediaBlock,
   SocialMediaImage,
   TeamImage,
@@ -23,13 +20,14 @@ import {
   TeamPersonTitle,
   TeamPersonWrap,
   TeamPositionLink,
-  TeamSlider,
+  TeamSliderWrap,
   TeamText,
   TeamTextBlock,
   TeamTextBlockWrap,
   TeamTitle,
   TeamWrap,
 } from './index.styles';
+import Slider from '@/components/Slider';
 
 interface Data {
   image: string | StaticImageData;
@@ -61,20 +59,7 @@ const teamData = [
 ];
 
 const Team = () => {
-  const [data, setData] = useState<Data[]>(teamData);
-
-  const handleClick = () => {
-    if (!data || data.length === 0) return;
-
-    const newData = [...data];
-    const firstItem = newData.shift();
-    if (firstItem) {
-      newData.push(firstItem);
-      setData(newData);
-    }
-  };
-
-  const displayedData = data.slice(0, 3);
+  const [data] = useState<Data[]>(teamData);
 
   return (
     <TeamWrap>
@@ -87,28 +72,26 @@ const Team = () => {
           know the people who lead
         </TeamText>
       </TeamMainTextBlock>
-      <TeamSlider>
-        {displayedData?.map((item, index) => (
-          <TeamPersonWrap key={index}>
-            <TeamImage src={item.image} alt="Pic" />
-            <TeamPersonBlock>
-              <TeamPersonTextBlock>
-                <TeamPersonTitle>{item.name}</TeamPersonTitle>
-                <TeamPersonText>{item.post}</TeamPersonText>
-              </TeamPersonTextBlock>
-              <SocialMediaBlock>
-                <SocialMediaImage src={TwitterLogo} alt="TwitterLogo" />
-                <SocialMediaImage src={LinkedinLogo} alt="LinkedinLogo" />
-                <SocialMediaImage src={InstagramLogo} alt="InstagramLogo" />
-              </SocialMediaBlock>
-            </TeamPersonBlock>
-          </TeamPersonWrap>
-        ))}
-        <SliderButton onClick={handleClick}>
-          {' '}
-          <SliderIcon src={ButtonIcon} alt="ButtonIcon" />
-        </SliderButton>
-      </TeamSlider>
+      <TeamSliderWrap>
+        <Slider>
+          {data?.map((item, index) => (
+            <TeamPersonWrap key={index}>
+              <TeamImage src={item.image} alt="Pic" />
+              <TeamPersonBlock>
+                <TeamPersonTextBlock>
+                  <TeamPersonTitle>{item.name}</TeamPersonTitle>
+                  <TeamPersonText>{item.post}</TeamPersonText>
+                </TeamPersonTextBlock>
+                <SocialMediaBlock>
+                  <SocialMediaImage src={TwitterLogo} alt="TwitterLogo" />
+                  <SocialMediaImage src={LinkedinLogo} alt="LinkedinLogo" />
+                  <SocialMediaImage src={InstagramLogo} alt="InstagramLogo" />
+                </SocialMediaBlock>
+              </TeamPersonBlock>
+            </TeamPersonWrap>
+          ))}
+        </Slider>
+      </TeamSliderWrap>
       <TeamTextBlock>
         <TeamTitle widthValue={'626px'}>Join our team, The one with the master touch</TeamTitle>
         <TeamTextBlockWrap>

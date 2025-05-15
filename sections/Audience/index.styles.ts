@@ -127,12 +127,12 @@ export const AudienceLogo = styled(Image)`
 export const AudiencePicBlock = styled.div`
   display: flex;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     align-self: center;
     margin-top: 8px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1439px) {
     display: flex;
     gap: 32px;
     margin-top: 135px;

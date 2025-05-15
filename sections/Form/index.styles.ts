@@ -5,7 +5,7 @@ export const FormWrap = styled.div`
   display: flex;
 
   @media (max-width: 1200px) {
-    padding: 56px 0 29px;
+    padding: 56px 0 80px;
     justify-content: center;
   }
 
@@ -13,7 +13,7 @@ export const FormWrap = styled.div`
     width: 1200px;
     justify-content: space-between;
     position: relative;
-    padding: 84px 0 138px;
+    padding: 84px 0 261px;
   }
 `;
 

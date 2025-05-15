@@ -6,7 +6,6 @@ import Picture2 from '@/public/images/home/Rectangle2.png';
 import Picture3 from '@/public/images/home/ImagePeople.png';
 import {
   InsightImage,
-  InsightSlider,
   InsightSliderDescriptionBlock,
   InsightSliderItem,
   InsightSliderText,
@@ -17,7 +16,8 @@ import {
   InsightTitle,
   InsightWrap,
 } from './index.styles';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
+import Slider from '@/components/Slider';
 
 interface Data {
   image: string | StaticImageData;
@@ -49,40 +49,6 @@ const postData = [
 
 const Insight = () => {
   const [data] = useState<Data[]>(postData);
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const onMouseDown = (e: React.MouseEvent) => {
-    if (!sliderRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - sliderRef.current.offsetLeft);
-    setScrollLeft(sliderRef.current.scrollLeft);
-    sliderRef.current.style.cursor = 'grabbing';
-  };
-
-  const onMouseLeave = () => {
-    setIsDragging(false);
-    if (sliderRef.current) {
-      sliderRef.current.style.cursor = 'grab';
-    }
-  };
-
-  const onMouseUp = () => {
-    setIsDragging(false);
-    if (sliderRef.current) {
-      sliderRef.current.style.cursor = 'grab';
-    }
-  };
-
-  const onMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !sliderRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
 
   return (
     <InsightWrap>
@@ -90,13 +56,7 @@ const Insight = () => {
         <InsightTitle>Trending news from Coca</InsightTitle>
         <InsightText>we have some new Service to pamper you</InsightText>
       </InsightTextBlock>
-      <InsightSlider
-        ref={sliderRef}
-        onMouseDown={onMouseDown}
-        onMouseLeave={onMouseLeave}
-        onMouseUp={onMouseUp}
-        onMouseMove={onMouseMove}
-      >
+      <Slider>
         {data?.map((item, index) => (
           <InsightSliderItem key={index}>
             <>
@@ -111,7 +71,7 @@ const Insight = () => {
             </>
           </InsightSliderItem>
         ))}
-      </InsightSlider>
+      </Slider>
     </InsightWrap>
   );
 };

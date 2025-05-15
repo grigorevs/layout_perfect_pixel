@@ -66,14 +66,15 @@ export const AccordionContainer = styled.div.withConfig({
   shouldForwardProp: (prop) => !['isOpen'].includes(prop),
 })`
   margin: 0 auto;
-  padding-bottom: 48px;
 
   @media (max-width: 1200px) {
     width: 335px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: 1200px) {
     width: 1114px;
+    padding-bottom: 160px;
   }
 `;
 

@@ -86,30 +86,13 @@ export const TeamTextBlock = styled.div`
   }
 `;
 
-export const TeamSlider = styled.div`
-  display: flex;
-  position: relative;
-
-  @media (max-width: 800px) {
-    gap: 16px;
+export const TeamSliderWrap = styled.div`
+  @media (min-width: 375px) {
     padding: 32px 0 56px;
-    right: -220px;
-    width: 335px;
-    justify-content: center;
-  }
-
-  @media (min-width: 800px) {
-    left: 0px;
-    gap: 16px;
-    padding: 32px 0 56px;
-    width: 335px;
-    justify-content: center;
   }
 
   @media (min-width: 1200px) {
-    gap: 32px;
     padding: 80px 0 100px;
-    width: 1200px;
   }
 `;
 
@@ -178,6 +161,13 @@ export const SocialMediaImage = styled(Image)`
 export const SocialMediaBlock = styled.div`
   display: flex;
   gap: 8px;
+
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+  }
 `;
 
 export const TeamPersonTextBlock = styled.div`
@@ -201,6 +191,13 @@ export const TeamPersonBlock = styled.div`
 export const TeamPersonWrap = styled.div`
   display: flex;
   flex-direction: column;
+
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+  }
 
   @media (max-width: 1200px) {
     gap: 8px;

@@ -1,7 +1,6 @@
 import { useRouter } from 'next/navigation';
 import { StyledList, StyledListItem } from './index.styles';
 
-
 const RoutingList = () => {
   const router = useRouter();
 
@@ -13,7 +12,7 @@ const RoutingList = () => {
     <StyledList>
       <StyledListItem onClick={() => navigateTo('/')}>Home</StyledListItem>
       <StyledListItem onClick={() => navigateTo('/about')}>About</StyledListItem>
-      <StyledListItem>Blog</StyledListItem>
+      <StyledListItem onClick={() => navigateTo('/blog')}> Blog</StyledListItem>
       <StyledListItem onClick={() => navigateTo('/pricing')}>Pricing</StyledListItem>
     </StyledList>
   );
