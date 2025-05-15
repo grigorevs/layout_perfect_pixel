@@ -2,19 +2,17 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 export const FormWrap = styled.div`
-display: flex;
-
+  display: flex;
 
   @media (max-width: 1200px) {
-    /* width: 335px; */
     padding: 56px 0 29px;
-   justify-content: center;
+    justify-content: center;
   }
 
   @media (min-width: 1200px) {
     width: 1200px;
-  justify-content: space-between;
-  position: relative;
+    justify-content: space-between;
+    position: relative;
     padding: 84px 0 138px;
   }
 `;
