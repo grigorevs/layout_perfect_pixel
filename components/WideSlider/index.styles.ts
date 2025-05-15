@@ -23,10 +23,9 @@ const StyledSlider = styled.div`
 
   @media (min-width: 1200px) {
     justify-content: space-between;
-    width: 1200px;
-    /* width: 100%; */
+    width: 1600px;
     gap: 32px;
-    left: 0;
+    left: 200px;
   }
 `;
 
