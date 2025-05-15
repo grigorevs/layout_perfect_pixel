@@ -1,4 +1,23 @@
 import styled from 'styled-components';
+import Image from 'next/image';
+
+export const FormWrap = styled.div`
+display: flex;
+
+
+  @media (max-width: 1200px) {
+    /* width: 335px; */
+    padding: 56px 0 29px;
+   justify-content: center;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  justify-content: space-between;
+  position: relative;
+    padding: 84px 0 138px;
+  }
+`;
 
 export const FormTitle = styled.h1`
   font-family: 'Inter-SemiBold';
@@ -87,15 +106,15 @@ export const FormTextArea = styled.textarea`
   resize: none;
 `;
 
-export const FormWrap = styled.div`
-
+export const FormBlock = styled.div`
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   border: 1px solid #ced1d8;
 
   @media (max-width: 1200px) {
     width: 335px;
-    padding: 24px 0 32px;
+    padding: 24px 24px 32px;
   }
 
   @media (min-width: 1200px) {
@@ -103,7 +122,6 @@ export const FormWrap = styled.div`
     padding: 56px 48px;
   }
 `;
-
 
 export const FormInputs = styled.div`
   display: flex;
@@ -118,7 +136,6 @@ export const FormInputs = styled.div`
     gap: 24px;
   }
 `;
-
 
 export const FormNameInputBlock = styled.div`
   display: flex;
@@ -136,4 +153,18 @@ export const FormNameInputBlock = styled.div`
 
 export const FormInputBlock = styled.div`
   width: 100%;
+`;
+
+export const FormImage = styled(Image)`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    right: -155px;
+    z-index: -1;
+    width: 987px;
+    height: 885px;
+  }
 `;

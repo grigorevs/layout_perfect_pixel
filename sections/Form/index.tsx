@@ -10,12 +10,17 @@ import {
   FormText,
   FormTextArea,
   FormTitle,
+  FormBlock,
   FormWrap,
+  FormImage,
 } from './index.styles';
+import Image from 'next/image';
+import Picture from '@/public/images/contact/Image.png';
 
 const Form = () => {
   return (
     <FormWrap>
+      <FormBlock>
       <FormTitle>Let’s level up your brand</FormTitle>
       <FormText>
         You can reach us anytime <span>hellosansbrothers@gmail.com</span>
@@ -45,6 +50,8 @@ const Form = () => {
         </FormInputBlock>
       </FormInputs>
       <Button theme="light">Get Started</Button>
+    </FormBlock>
+    <FormImage src={Picture} alt='Picture'/>
     </FormWrap>
   );
 };
