@@ -18,6 +18,7 @@ export const ContentWrap = styled.div`
 export const ContentPicBlock = styled.div`
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
   @media (max-width: 1200px) {
     width: 335px;

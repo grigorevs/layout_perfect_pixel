@@ -12,12 +12,18 @@ import {
   ContentTitle,
   ContentWrap,
 } from './index.styles';
+import { useRouter } from 'next/navigation';
 
 const Content = () => {
+  const router = useRouter();
+
+  const navigateTo = (path: string) => {
+    router.push(path);
+  };
   return (
     <ContentWrap>
       <ContentBlock>
-        <ContentPicBlock>
+        <ContentPicBlock onClick={() => navigateTo('/detail-blog')}>
           <Image src={Pic1} alt="Pic" />
           <ContentTitle>How we perform long-running tasks using AWS services</ContentTitle>
           <ContentText>
