@@ -257,6 +257,11 @@ export const TestimonialNextButton = styled.button`
   @media (max-width: 1200px) {
     width: 28px;
     height: 28px;
+
+    img {
+      width: 12.8px;
+      height: 11.2px;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -277,6 +282,11 @@ export const TestimonialPrevButton = styled.button`
   @media (max-width: 1200px) {
     width: 28px;
     height: 28px;
+
+    img {
+      width: 12.8px;
+      height: 11.2px;
+    }
   }
 
   @media (min-width: 1200px) {

@@ -66,7 +66,7 @@ export const FeatureTitle = styled.h1`
   }
 `;
 
-export const OverviewText = styled.p`
+export const FeatureText = styled.p`
   font-family: 'Inter-Medium';
   font-weight: 500;
   color: #7e8492;

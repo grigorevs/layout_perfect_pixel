@@ -167,6 +167,7 @@ export const ServicesImage = styled(Image)`
     width: 160px;
     height: 216px;
     object-fit: cover;
+    object-position: 100% 0;
   }
 
   @media (min-width: 1200px) {

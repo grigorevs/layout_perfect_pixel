@@ -180,7 +180,7 @@ export const FooterCompanyText = styled.p.withConfig({
 
 export const FooterButtonWrap = styled.div`
   @media (max-width: 1200px) {
-    padding-left: 42px;
+    padding-left: 30px;
   }
 `;
 

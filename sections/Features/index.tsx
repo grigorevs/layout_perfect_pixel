@@ -7,11 +7,11 @@ import {
   FeatureWrap,
   FeatureBlock,
   FeatureTitle,
-  OverviewText,
   FeatureListBlock,
   FeatureListItem,
   FeatureListItemText,
   FeatureImage,
+  FeatureText,
 } from './index.styles';
 
 const Features = () => {
@@ -20,11 +20,10 @@ const Features = () => {
       <FeatureImage src={FeaturePic} alt="FeaturePic" />
       <FeatureBlock>
         <FeatureTitle>Passion to increase company revenue up to 85%</FeatureTitle>
-        <OverviewText>
+        <FeatureText>
           Automate your sales, marketing and service in one platform. Avoid date leaks and enable
           consistent messaging
-        </OverviewText>
-
+        </FeatureText>
         <FeatureListBlock>
           <FeatureListItem>
             <Image src={Icon} alt="Icon" />
