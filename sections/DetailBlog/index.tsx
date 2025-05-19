@@ -4,18 +4,32 @@ import Image from 'next/image';
 import UserAvatar from '@/public/images/detail-blog/UserPic.svg';
 import PostImage from '@/public/images/detail-blog/Pic.png';
 import UserPic from '@/public/images/detail-blog/Img.svg';
+
+import FBLogo from '@/public/images/detail-blog/Facebook.svg';
+import TLogo from '@/public/images/detail-blog/Twitter.svg';
+import LILogo from '@/public/images/detail-blog/Linkedin.svg';
+import IGLogo from '@/public/images/detail-blog/Inst.svg';
+
 import {
+  AuthorName,
+  BlogAboutBlock,
   BlogAuthorBlock,
   BlogAuthorTextWrap,
   BlogAuthorWrap,
+  BlogDesciptionText,
+  BlogLogosBlock,
   BlogPost,
   BlogPostDate,
+  BlogShareBlock,
   BlogText,
   BlogTextTitle,
   BlogTitle,
   BlogUserName,
   BlogUserPost,
+  BlogUserTextWrap,
+  BlogUserWrap,
   BlogWrap,
+  BlogWrittenByText,
 } from './index.styles';
 
 const DetailBlog = () => {
@@ -66,15 +80,35 @@ const DetailBlog = () => {
           to see the results. They can’t use the app during the process, which makes for a bad user
           experience.
         </BlogText>
-        <div>
+        <BlogUserWrap>
           <Image src={UserPic} alt="UserPic" />
-          <div>
-            <div>
-              <Image alt="Logo"></Image>
-            </div>
-            <p>Share this article</p>
-          </div>
-        </div>
+          <BlogAboutBlock>
+            <BlogShareBlock>
+              <BlogLogosBlock>
+                <Image src={FBLogo} alt={'Logo'} />
+                <Image src={TLogo} alt={'Logo'} />
+                <Image src={LILogo} alt={'Logo'} />
+                <Image src={IGLogo} alt={'Logo'} />
+              </BlogLogosBlock>
+              <BlogText>Share this article</BlogText>
+            </BlogShareBlock>
+            <BlogUserTextWrap>
+              <BlogWrittenByText>Written by</BlogWrittenByText>
+              <AuthorName>Renee Wells</AuthorName>
+              <BlogUserPost>Product Designer, Quotient</BlogUserPost>
+              <BlogText>
+                Skilled in React Native, iOS and backend, Toni has a demonstrated knowledge of the
+                information technology and services industry, with plenty of hands-on experience to
+                back it up.
+              </BlogText>
+            </BlogUserTextWrap>
+          </BlogAboutBlock>
+        </BlogUserWrap>
+        <BlogDesciptionText>
+          Skilled in React Native, iOS and backend, Toni has a demonstrated knowledge of the
+          information technology and services industry, with plenty of hands-on experience to back
+          it up.
+        </BlogDesciptionText>
       </div>
     </BlogWrap>
   );

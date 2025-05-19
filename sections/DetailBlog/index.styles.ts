@@ -206,3 +206,113 @@ export const AuthorName = styled.p`
     letter-spacing: -1px;
   }
 `;
+
+export const BlogUserWrap = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1200px) {
+    gap: 16px;
+    padding: 32px 0 16px;
+
+    img {
+      width: 199px;
+      height: 209px;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    gap: 48px;
+    width: 893px;
+    padding: 56px 0 120px;
+  }
+`;
+
+export const BlogUserTextWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1200px) {
+    width: 120px;
+    gap: 8px;
+
+    :last-child {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    gap: 16px;
+
+    p {
+      width: 645px;
+    }
+  }
+`;
+
+export const BlogDesciptionText = styled(BlogText)`
+  @media (max-width: 1200px) {
+    display: block;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+`;
+
+export const BlogLogosBlock = styled.div`
+  display: flex;
+
+  @media (max-width: 1200px) {
+    gap: 8px;
+    padding-left: 8px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    gap: 32px;
+  }
+`;
+
+export const BlogShareBlock = styled.div`
+  display: flex;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 24px;
+  }
+`;
+
+export const BlogAboutBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1200px) {
+    gap: 56px;
+    width: 120px;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 14px;
+    width: 645px;
+  }
+`;
+
+export const BlogWrittenByText = styled.p`
+  color: #7e8492;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 24px;
+`;
