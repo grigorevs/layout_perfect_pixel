@@ -11,6 +11,7 @@ import {
   HeaderInputBlock,
   HeaderItem,
   HeaderText,
+  HeaderTextMobile,
   HeaderTitle,
   LineImage,
   Sales,
@@ -37,6 +38,10 @@ const HeaderSection = () => {
             When it comes to interactive marketing, we&apos;ve got you covered. Be where the world
             is going
           </HeaderText>
+          <HeaderTextMobile>
+            Our biggest challenge is making sure we&apos;re always designing and building products
+            that will help you run your business better.
+          </HeaderTextMobile>
         </HeaderDescription>
         <HeaderInputBlock>
           <HeaderInput type="email" placeholder="Enter your email" />

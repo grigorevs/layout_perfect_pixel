@@ -8,7 +8,7 @@ export const InsightWrap = styled.div`
 
   @media (max-width: 1200px) {
     gap: 32px;
-    margin: 0 0 39px;
+    margin: 14px 0 56px;
     align-items: center;
   }
 
@@ -26,6 +26,8 @@ export const InsightTextBlock = styled.div`
   @media (max-width: 1200px) {
     align-items: start;
     gap: 16px;
+    position: relative;
+    left: -6px;
   }
 
   @media (min-width: 1200px) {
@@ -68,6 +70,9 @@ export const InsightText = styled.p`
     font-size: 18px;
     line-height: 32px;
     letter-spacing: 0;
+    position: relative;
+    left: -3px;
+    top: -1px;
   }
 `;
 
@@ -139,6 +144,7 @@ export const InsightSliderTextBlock = styled.div`
 
   @media (max-width: 1200px) {
     margin-top: 8px;
+    gap: 7px;
   }
 
   @media (min-width: 1200px) {
@@ -156,6 +162,8 @@ export const InsightSliderDescriptionBlock = styled.div`
 
   @media (min-width: 1200px) {
     margin-top: 16px;
+    position: relative;
+    bottom: 17px;
   }
 `;
 

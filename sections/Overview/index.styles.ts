@@ -39,7 +39,7 @@ export const OverviewTitle = styled.h1`
     margin: 100px 0 24px;
     font-size: 56px;
     line-height: 120%;
-    letter-spacing: -2.3px;
+    letter-spacing: -2px;
   }
 `;
 
@@ -69,8 +69,71 @@ export const OverviewDetailsWrap = styled.div`
   @media (max-width: 1200px) {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    margin: 32px 0;
+    gap: 5px;
+    margin: 32px 0 39px;
+
+    div:nth-child(1) h3 {
+      position: relative;
+      top: -6px;
+    }
+    div:nth-child(1) p {
+      position: relative;
+      top: -16px;
+    }
+
+    div:nth-child(2) img {
+      position: relative;
+      top: 3px;
+      width: 22px;
+      height: 22px;
+    }
+
+    div:nth-child(2) h3 {
+      position: relative;
+      top: -2px;
+    }
+
+    div:nth-child(2) p {
+      position: relative;
+      top: -11px;
+      width: 340px;
+    }
+
+    div:nth-child(3) img {
+      position: relative;
+      top: 8px;
+      left: 1px;
+      width: 21px;
+      height: 21px;
+    }
+
+    div:nth-child(3) h3 {
+      position: relative;
+      top: 4px;
+    }
+
+    div:nth-child(3) p {
+      position: relative;
+      top: -5px;
+    }
+
+    div:nth-child(4) img {
+      position: relative;
+      top: 16px;
+      left: 1px;
+      width: 21px;
+      height: 21px;
+    }
+
+    div:nth-child(4) h3 {
+      position: relative;
+      top: 9px;
+      font-size: 16px;
+    }
+
+    div:nth-child(4) p {
+      width: 340px;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -78,6 +141,61 @@ export const OverviewDetailsWrap = styled.div`
     row-gap: 56px;
     column-gap: 259px;
     margin: 80px 0 100px;
+
+    div:nth-child(1) p {
+      width: 450px;
+    }
+
+    div:nth-child(2) img {
+      width: 35px;
+      height: 35px;
+      padding: 3px 0 0 4px;
+    }
+
+    div:nth-child(2) h3 {
+      padding-top: 5px;
+    }
+
+    div:nth-child(2) p {
+      position: relative;
+      bottom: 2px;
+      width: 400px;
+    }
+
+    div:nth-child(3) img {
+      width: 37px;
+      height: 37px;
+      position: relative;
+      right: -2px;
+    }
+
+    div:nth-child(3) h3 {
+      width: 200px;
+      position: relative;
+      bottom: -3px;
+    }
+
+    div:nth-child(3) p {
+      position: relative;
+      bottom: -2px;
+    }
+
+    div:nth-child(4) img {
+      width: 38px;
+      height: 38px;
+      position: relative;
+      right: -2px;
+    }
+
+    div:nth-child(4) h3 {
+      position: relative;
+      bottom: -3px;
+    }
+
+    div:nth-child(4) p {
+      position: relative;
+      bottom: -2px;
+    }
   }
 `;
 
@@ -141,10 +259,5 @@ export const Icon = styled(Image)`
   @media (max-width: 1200px) {
     height: 24px;
     width: 24px;
-  }
-
-  @media (min-width: 1200px) {
-    height: 30px;
-    width: 30px;
   }
 `;

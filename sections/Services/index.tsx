@@ -10,6 +10,7 @@ import {
   ServicesText,
   ServicesTextBlock,
   ServicesTitle,
+  ServicesTitleMobile,
   ServicesWrap,
 } from './index.styles';
 import Image1 from '@/public/images/home/Frame1.png';
@@ -22,6 +23,7 @@ const Services = () => {
     <ServicesWrap>
       <ServicesTextBlock>
         <ServicesTitle>Advertise, analyze, and optimize! We do it all for you</ServicesTitle>
+        <ServicesTitleMobile>Here’s how Sans can benefit your busines</ServicesTitleMobile>
         <ServicesText>
           Build more meaningful and lasting relationships - better understand their needs, identify
           new opportunities to help address any problems faster

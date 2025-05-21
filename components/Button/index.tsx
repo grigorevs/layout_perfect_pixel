@@ -7,7 +7,7 @@ interface ButtonProps {
   [key: string]: unknown;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, theme = 'dark', ...props }) => {
+const Button: React.FC<ButtonProps> = ({ children, theme = 'light', ...props }) => {
   return (
     <StyledButton buttonTheme={theme} {...props}>
       {children}

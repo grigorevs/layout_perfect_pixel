@@ -26,11 +26,104 @@ export const StrengthInfo = styled.div`
     flex-wrap: wrap;
     width: 347px;
     gap: 13px;
+
+    img {
+      height: 65px;
+      position: relative;
+      left: 6px;
+    }
+
+    div:nth-child(1) p {
+      position: relative;
+      right: 0px;
+      top: 8px;
+    }
+
+    div:nth-child(3) p {
+      position: relative;
+      right: -8px;
+      top: 8px;
+    }
+
+    div:nth-child(3) h1 {
+      position: relative;
+      right: -8px;
+      top: -1px;
+    }
+
+    div:nth-child(5) {
+      position: relative;
+      right: 0px;
+      top: 10px;
+    }
+
+    div:nth-child(5) p {
+      position: relative;
+      right: 0px;
+      top: 10px;
+    }
+
+    div:nth-child(7) p {
+      position: relative;
+      right: -5px;
+      top: 18px;
+    }
+
+    div:nth-child(7) h1 {
+      position: relative;
+      right: -8px;
+      top: 11px;
+    }
   }
 
   @media (min-width: 1200px) {
     width: 1200px;
     gap: 60px;
+
+    div:nth-child(1) {
+      position: relative;
+      right: -2px;
+      top: -2px;
+      width: 240px;
+    }
+
+    div:nth-of-type(2) h1 {
+      position: relative;
+      right: -12px;
+      bottom: 2px;
+    }
+
+    div:nth-of-type(2) p {
+      position: relative;
+      right: -12px;
+      bottom: 2px;
+    }
+
+    div:nth-of-type(3) h1 {
+      position: relative;
+      right: -13px;
+      bottom: 2px;
+    }
+
+    div:nth-of-type(3) p {
+      position: relative;
+      right: -12px;
+      bottom: 2px;
+    }
+
+    div:nth-of-type(4) h1 {
+      position: relative;
+      right: -13px;
+      bottom: 2px;
+      width: 252px;
+    }
+
+    div:nth-of-type(4) p {
+      position: relative;
+      width: 170px;
+      right: -12px;
+      bottom: 2px;
+    }
   }
 `;
 
@@ -47,7 +140,8 @@ export const VerticalLineIcon = styled(Image)`
 export const StrengthPic = styled(Image)`
   @media (max-width: 1200px) {
     width: 335px;
-    height: 162px;
+    height: 181px;
+    padding-top: 18px;
   }
 
   @media (min-width: 1200px) {
@@ -62,7 +156,8 @@ export const StrengthInfoItem = styled.div`
 
   @media (max-width: 1200px) {
     width: 160px;
-    gap: 0;
+    position: relative;
+    left: 5px;
   }
 
   @media (min-width: 1200px) {
@@ -71,12 +166,12 @@ export const StrengthInfoItem = styled.div`
 `;
 
 export const StrengthInfoItemTitle = styled.h1`
-  font-family: 'Inter-Bold';
+  font-family: 'Inter';
   font-weight: 600;
   color: #1d1e25;
 
   @media (max-width: 1200px) {
-    font-size: 32px;
+    font-size: 33px;
     line-height: 42px;
     letter-spacing: -1px;
   }
@@ -113,6 +208,7 @@ export const StrengthDescription = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    padding-top: 7px;
   }
 
   @media (min-width: 1200px) {
@@ -132,13 +228,25 @@ export const StrengthDescriptionTitle = styled.h1`
     line-height: 34px;
     letter-spacing: 0;
     width: 335px;
+    display: none;
   }
 
   @media (min-width: 1200px) {
     font-size: 56px;
     line-height: 120%;
-    letter-spacing: -2.35px;
-    width: 650px;
+    letter-spacing: -2px;
+    width: 654px;
+    display: block;
+  }
+`;
+
+export const StrengthDescriptionTitleMobile = styled(StrengthDescriptionTitle)`
+  @media (max-width: 1200px) {
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
   }
 `;
 

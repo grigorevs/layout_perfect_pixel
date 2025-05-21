@@ -14,6 +14,7 @@ import {
   StrengthDescriptionTitle,
   VerticalLineIcon,
   StrengthPic,
+  StrengthDescriptionTitleMobile,
 } from './index.styles';
 
 const Strength = () => {
@@ -45,6 +46,9 @@ const Strength = () => {
         <StrengthDescriptionTitle>
           Lift your business to new heights with our digital marketing services
         </StrengthDescriptionTitle>
+        <StrengthDescriptionTitleMobile>
+          Drive sustainable growth with personal and engaging experiences
+        </StrengthDescriptionTitleMobile>
         <StrengthDescriptionText>
           To build software that gives customer facing teams in small and medium-sized businesses
           the ability to create rewarding and long-lasting relationships with customers

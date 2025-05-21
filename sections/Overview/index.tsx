@@ -16,6 +16,29 @@ import IconTwo from '@/public/images/home/Icon2.svg';
 import IconThree from '@/public/images/home/Icon3.svg';
 import IconFour from '@/public/images/home/Icon4.svg';
 
+const data = [
+  {
+    title: 'Build your date fundamental',
+    text: 'Build access to date, develop valuable business insights and drive revenue while maintaining full control over access and use of date at all times.',
+    image: IconOne,
+  },
+  {
+    title: 'Measure more effective',
+    text: 'Effectively measure people-based campaigns with the freedom to choose from best-of breed partners to optimize and drive media innovation.',
+    image: IconTwo,
+  },
+  {
+    title: 'Activate your date',
+    text: 'Accurately address your specific audiences at scale across any channel, platform, publisher or network and safely translate date between identity space to improve results.',
+    image: IconThree,
+  },
+  {
+    title: 'Strengthen consumer privacy',
+    text: 'Protect your customer date with leading privacy-preserving technologies and advanced techniques to minimize date movement while still enabling insight generation.',
+    image: IconFour,
+  },
+];
+
 const Overview = () => {
   return (
     <OverviewWrap>
@@ -28,39 +51,13 @@ const Overview = () => {
           with industry leading software solutions for identity, activation, and date collaboration
         </OverviewText>
         <OverviewDetailsWrap>
-          <OverviewDetailsItem>
-            <Icon src={IconOne} alt="Icon" />
-            <OverviewDetailsItemTitle>Build your date fundamental</OverviewDetailsItemTitle>
-            <OverviewDetailsItemText>
-              Build access to date, develop valuable business insights and drive revenue while
-              maintaining full control over <br /> access and use of date at all times.
-            </OverviewDetailsItemText>
-          </OverviewDetailsItem>
-          <OverviewDetailsItem>
-            <Icon src={IconTwo} alt="Icon" />
-            <OverviewDetailsItemTitle>Measure more effective</OverviewDetailsItemTitle>
-            <OverviewDetailsItemText>
-              Effectively measure people-based campaigns with <br /> the freedom to choose from
-              best-of breed partners <br /> to optimize and drive media innovation.
-            </OverviewDetailsItemText>
-          </OverviewDetailsItem>
-          <OverviewDetailsItem>
-            <Icon src={IconThree} alt="Icon" />
-            <OverviewDetailsItemTitle>Activate your date</OverviewDetailsItemTitle>
-            <OverviewDetailsItemText>
-              Accurately address your specific audiences at scale across any channel, platform,
-              publisher or network and safely translate date between identity space to improve
-              results.
-            </OverviewDetailsItemText>
-          </OverviewDetailsItem>
-          <OverviewDetailsItem>
-            <Icon src={IconFour} alt="Icon" />
-            <OverviewDetailsItemTitle>Strengthen consumer privacy</OverviewDetailsItemTitle>
-            <OverviewDetailsItemText>
-              Protect your customer date with leading privacy-preserving technologies and advanced
-              techniques to minimize date movement while still enabling insight generation.
-            </OverviewDetailsItemText>
-          </OverviewDetailsItem>
+          {data.map((item, index) => (
+            <OverviewDetailsItem key={index}>
+              <Icon src={item.image} alt="Icon" />
+              <OverviewDetailsItemTitle>{item.title}</OverviewDetailsItemTitle>
+              <OverviewDetailsItemText>{item.text}</OverviewDetailsItemText>
+            </OverviewDetailsItem>
+          ))}
         </OverviewDetailsWrap>
       </OverviewBlock>
     </OverviewWrap>

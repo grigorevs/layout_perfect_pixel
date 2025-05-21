@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import {
   BackgroundTopBlur,
+  FooterButton,
   FooterButtonWrap,
   FooterCompanyText,
   FooterCompanyTextBlock,
@@ -29,7 +30,6 @@ import {
 } from './index.styles';
 import Logo from '@/public/images/Logo.svg';
 import LogoDarkTheme from '@/public/images/about/LogoDarkTheme.svg';
-import Button from '@/components/Button';
 import TopBlur from '@/public/images/home/Ellipse125.svg';
 import FacebookLogo from '@/public/images/home/Facebook.svg';
 import TwitterLogo from '@/public/images/home/Twitter.svg';
@@ -62,7 +62,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
           </FooterDescription>
         </FooterDescriptionBlock>
         <FooterButtonWrap>
-          <Button theme={theme}>Try for free</Button>
+          <FooterButton theme={theme}>Try for free</FooterButton>
         </FooterButtonWrap>
       </FooterDescriptionWrap>
       <FooterLinkstWrap>

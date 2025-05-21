@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import Button from '@/components/Button';
 
 export const FooterWrap = styled.div.withConfig({
   shouldForwardProp: (prop) => prop !== 'backgroundColor',
@@ -38,6 +39,8 @@ export const FooterDescriptionBlock = styled.div`
 
   @media (max-width: 1200px) {
     gap: 24px;
+    position: relative;
+    top: 4px;
   }
 
   @media (min-width: 1200px) {
@@ -88,8 +91,9 @@ export const FooterTitle = styled.h1.withConfig({
   @media (min-width: 1200px) {
     font-size: 64px;
     line-height: 120%;
-    width: 720px;
+    width: 760px;
     padding-top: 112px;
+    letter-spacing: 0.4px;
   }
 `;
 
@@ -121,13 +125,13 @@ export const LineBlock = styled.div.withConfig({
   height: 1px;
 
   @media (max-width: 1200px) {
-    width: 24px;
+    width: 35px;
     margin-top: 12px;
   }
 
   @media (min-width: 1200px) {
     width: 76px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 `;
 
@@ -140,6 +144,8 @@ export const FooterCompanyTextBlock = styled.div`
     padding: 56px 0;
     align-items: start;
     width: 335px;
+    position: relative;
+    left: 4px;
   }
 `;
 
@@ -167,6 +173,8 @@ export const FooterCompanyText = styled.p.withConfig({
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0;
+    position: relative;
+    top: 5px;
   }
 
   @media (min-width: 1200px) {
@@ -180,7 +188,19 @@ export const FooterCompanyText = styled.p.withConfig({
 
 export const FooterButtonWrap = styled.div`
   @media (max-width: 1200px) {
-    padding-left: 30px;
+    padding: 3px 0 0 43px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 110px 0 0 30px;
+  }
+`;
+
+export const FooterButton = styled(Button)`
+  @media (max-width: 1200px) {
+    width: 142px;
+    height: 44px;
+    font-size: 14px;
   }
 `;
 
@@ -202,6 +222,9 @@ export const FooterListWrap = styled.div`
   @media (min-width: 1200px) {
     display: flex;
     gap: 93px;
+    position: relative;
+    top: -4px;
+    right: 2px;
   }
 `;
 
@@ -258,6 +281,9 @@ export const FooterCopyrightText = styled.p`
     color: #7e8492;
     font-weight: 500;
     font-family: 'Inter-Medium';
+    position: relative;
+    left: -3px;
+    top: -4px;
   }
 
   @media (min-width: 1200px) {
@@ -281,11 +307,15 @@ export const FooterCopyright = styled.div`
     flex-direction: column;
     gap: 24px;
     align-items: center;
+    position: relative;
+    top: 2px;
   }
 
   @media (min-width: 1200px) {
     width: 1200px;
     height: 129px;
+    position: relative;
+    top: -3px;
   }
 `;
 
@@ -321,6 +351,9 @@ export const FooterSocialsImagesWrap = styled.div`
   gap: 24px;
   width: 168px;
   align-items: center;
+  position: relative;
+  left: -3px;
+  top: -4px;
 `;
 
 export const FooterMobileLinksList = styled.ul`
@@ -328,6 +361,8 @@ export const FooterMobileLinksList = styled.ul`
   display: flex;
   gap: 24px;
   width: 335px;
+  position: relative;
+  top: -3px;
 `;
 
 export const FooterMobileLink = styled.a`

@@ -7,17 +7,19 @@ const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 400px) {
+  @media (max-width: 1200px) {
     width: 100vw;
     padding: 0 20px;
+    position: relative;
+    top: -7px;
+
+    img:nth-child(1) {
+      width: 112px;
+      height: 52px;
+    }
   }
 
-  @media (min-width: 400px) {
-    padding: 0 20px;
-    width: 100vw;
-  }
-
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     width: 1200px;
     padding: 0;
   }

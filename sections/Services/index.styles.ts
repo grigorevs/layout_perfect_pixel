@@ -6,9 +6,9 @@ export const ServicesWrap = styled.div`
   flex-direction: column;
 
   @media (max-width: 1200px) {
-    padding: 56px 0;
+    padding: 41px 0;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
   }
 
   @media (min-width: 1200px) {
@@ -46,6 +46,7 @@ export const ServicesTitle = styled.h1`
     line-height: 34px;
     letter-spacing: 0;
     width: 335px;
+    display: none;
   }
 
   @media (min-width: 1200px) {
@@ -53,6 +54,17 @@ export const ServicesTitle = styled.h1`
     line-height: 120%;
     letter-spacing: -2px;
     width: 610px;
+    display: block;
+  }
+`;
+
+export const ServicesTitleMobile = styled(ServicesTitle)`
+  @media (max-width: 1200px) {
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
   }
 `;
 
@@ -66,6 +78,8 @@ export const ServicesText = styled.p`
     line-height: 20px;
     letter-spacing: 0;
     width: 335px;
+    position: relative;
+    top: -10px;
   }
 
   @media (min-width: 1200px) {
@@ -93,6 +107,8 @@ export const ServicesContentBlock = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    top: -2px;
   }
 `;
 

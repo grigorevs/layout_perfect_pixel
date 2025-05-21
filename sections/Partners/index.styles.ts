@@ -83,9 +83,107 @@ export const PartnersImagesBlock = styled.div`
 
   @media (max-width: 1200px) {
     width: auto;
+    row-gap: 70px;
+
+    img {
+      width: 75px;
+      height: 23px;
+    }
+
+    img:nth-child(1) {
+      position: relative;
+      right: 21px;
+      top: 5px;
+      width: 80px;
+      height: 24px;
+    }
+
+    img:nth-child(2) {
+      position: relative;
+      right: 53px;
+      top: 5px;
+    }
+
+    img:nth-child(3) {
+      position: relative;
+      right: 14px;
+      top: -2px;
+    }
+
+    img:nth-child(4) {
+      position: relative;
+      right: 52px;
+      top: -1px;
+      width: 89px;
+      height: 19px;
+    }
+
+    img:nth-child(5) {
+      position: relative;
+      right: 21px;
+      top: 76px;
+    }
+
+    img:nth-child(6) {
+      position: relative;
+      right: 52px;
+      top: 77px;
+    }
+
+    img:nth-child(7) {
+      position: relative;
+      right: -110px;
+      top: -101px;
+      width: 89px;
+      height: 21px;
+    }
+
+    img:nth-child(8) {
+      position: relative;
+      left: -196px;
+      top: -103px;
+      width: 62px;
+      height: 24px;
+    }
   }
 
   @media (min-width: 1200px) {
     width: 730px;
+
+    img:nth-child(-n + 4) {
+      position: relative;
+      right: -4px;
+      top: -2px;
+    }
+
+    img:nth-child(4) {
+      position: relative;
+      right: 4px;
+      top: -1px;
+    }
+
+    img:nth-child(5) {
+      position: relative;
+      right: 7px;
+      top: 3px;
+    }
+
+    img:nth-child(6) {
+      position: relative;
+      right: 2px;
+      top: 2px;
+    }
+
+    img:nth-child(7) {
+      position: relative;
+      right: 8px;
+      top: 4px;
+    }
+
+    img:nth-child(8) {
+      position: relative;
+      right: 8px;
+      top: 3px;
+    }
   }
 `;

@@ -83,6 +83,7 @@ export const TestimonialReviewItem = styled.div`
   @media (max-width: 1200px) {
     margin-top: 80px;
     width: 335px;
+    gap: 12px;
     padding-left: 32px;
   }
 
@@ -109,6 +110,8 @@ export const TestimonialUserPic = styled(Image)`
   @media (max-width: 1200px) {
     width: 40px;
     height: 40px;
+    position: relative;
+    top: 4px;
   }
 
   @media (min-width: 1200px) {
@@ -157,6 +160,8 @@ export const TestimoniaUserPost = styled.h3`
   @media (max-width: 1200px) {
     font-size: 12px;
     line-height: 26px;
+    position: relative;
+    top: 3px;
   }
 
   @media (min-width: 1200px) {
@@ -169,6 +174,11 @@ export const TestimonialRateBlock = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+
+  @media (min-width: 1200px) {
+    position: relative;
+    left: 6px;
+  }
 `;
 
 export const TestimoniaRate = styled.p`
@@ -192,21 +202,25 @@ export const TestimoniaRate = styled.p`
 export const TestimoniaReviewTitle = styled.p`
   font-family: 'Inter-SemiBold';
   color: #1d1e25;
-  font-weight: 500;
 
   @media (max-width: 1200px) {
+    font-weight: 600;
     font-size: 18px;
     line-height: 26px;
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     margin-top: 0;
-    width: 303px;
+    width: 310px;
   }
 
   @media (min-width: 1200px) {
+    font-weight: 500;
     font-size: 40px;
     line-height: 130%;
-    letter-spacing: -1px;
+    letter-spacing: -1.2px;
     margin-top: 16px;
+    width: 950px;
+    position: relative;
+    right: -5px;
   }
 `;
 
@@ -221,9 +235,10 @@ export const TestimonialReviewBlock = styled.div`
   }
 
   @media (min-width: 1200px) {
-    width: 1200px;
-    padding-right: 157px;
+    width: 1039px;
     margin-top: 40px;
+    position: relative;
+    left: 75px;
   }
 `;
 
@@ -300,10 +315,14 @@ export const TestimonialButtonsBlock = styled.div`
 
   @media (max-width: 1200px) {
     gap: 8px;
+    position: relative;
+    top: 10px;
   }
 
   @media (min-width: 1200px) {
     gap: 16px;
+    position: relative;
+    top: 3px;
   }
 `;
 

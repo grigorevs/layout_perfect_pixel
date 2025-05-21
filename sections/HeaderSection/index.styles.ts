@@ -46,14 +46,15 @@ export const HeaderTitle = styled.h1`
   color: #1d1e25;
   width: 335px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 1200px) {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -1px;
-    margin-top: 0;
+    position: relative;
+    top: -5px;
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     font-size: 80px;
     line-height: 120%;
     letter-spacing: -3px;
@@ -77,7 +78,7 @@ export const LineImage = styled(Image)`
   margin-top: 22px;
 
   @media (max-width: 1200px) {
-    margin-top: 11px;
+    margin-top: 5px;
     width: 24px;
   }
 `;
@@ -88,17 +89,31 @@ export const HeaderText = styled.p`
   color: #1d1e25;
   width: 303px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 1200px) {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0;
+    display: none;
+    position: relative;
+    top: -5px;
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1200px) {
     font-size: 32px;
     line-height: 42px;
     letter-spacing: -0.9px;
     width: 514px;
+    display: block;
+  }
+`;
+
+export const HeaderTextMobile = styled(HeaderText)`
+  @media (max-width: 1200px) {
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
   }
 `;
 
@@ -107,6 +122,16 @@ export const HeaderInputBlock = styled.div`
   align-items: end;
   gap: 16px;
   margin-top: 69px;
+
+  @media (max-width: 1200px) {
+    margin-top: 20px;
+
+    button {
+      position: relative;
+      top: 5px;
+      right: 4px;
+    }
+  }
 `;
 
 export const HeaderInput = styled.input`
@@ -128,6 +153,9 @@ export const HeaderInput = styled.input`
     font-size: 14px;
     line-height: 20px;
     padding: 9px 0 16px;
+    position: relative;
+    right: -5px;
+    top: 5px;
   }
 `;
 
@@ -136,7 +164,9 @@ export const HeaderImagesBlock = styled.div`
   height: auto;
 
   @media (max-width: 1400px) {
-    height: 520px;
+    height: 514px;
+    top: -23px;
+    left: 10px;
   }
 `;
 
@@ -145,7 +175,7 @@ export const SalesReport = styled(Image)`
 
   @media (min-width: 375px) {
     right: -240px;
-    width: 450px;
+    width: 465px;
     margin-bottom: 176px;
   }
   @media (min-width: 1400px) {
@@ -159,9 +189,9 @@ export const CustomerGrowth = styled(Image)`
   position: absolute;
 
   @media (min-width: 375px) {
-    right: -260px;
-    width: 200px;
-    top: -21px;
+    right: -258px;
+    width: 203px;
+    top: -25px;
   }
   @media (min-width: 1400px) {
     top: 65px;
@@ -174,9 +204,9 @@ export const Sales = styled(Image)`
   position: absolute;
 
   @media (min-width: 375px) {
-    right: -240px;
-    width: 450px;
-    top: 320px;
+    right: -236px;
+    width: 460px;
+    top: 325px;
   }
   @media (min-width: 1400px) {
     top: 490px;

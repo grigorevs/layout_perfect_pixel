@@ -28,6 +28,8 @@ export const FeatureImage = styled(Image)`
   @media (min-width: 1200px) {
     width: 585px;
     height: 651px;
+    position: relative;
+    top: -4px;
   }
 `;
 
@@ -60,7 +62,7 @@ export const FeatureTitle = styled.h1`
   @media (min-width: 1200px) {
     font-size: 56px;
     line-height: 120%;
-    letter-spacing: -1.28px;
+    letter-spacing: -2px;
     width: 557px;
     margin-bottom: 24px;
   }
@@ -85,6 +87,8 @@ export const FeatureText = styled.p`
     letter-spacing: 0;
     width: 360px;
     margin-bottom: 40px;
+    position: relative;
+    top: -2px;
   }
 `;
 
@@ -107,6 +111,22 @@ export const FeatureListItem = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 1200px) {
+    img {
+      position: relative;
+      top: -2px;
+      right: -2px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    img {
+      position: relative;
+      top: -4px;
+      right: -2px;
+    }
+  }
 `;
 
 export const FeatureListItemText = styled.p`
@@ -119,6 +139,8 @@ export const FeatureListItemText = styled.p`
     line-height: 20px;
     letter-spacing: 0;
     width: 296px;
+    position: relative;
+    right: 5px;
   }
 
   @media (min-width: 1200px) {
@@ -126,5 +148,7 @@ export const FeatureListItemText = styled.p`
     line-height: 32px;
     letter-spacing: 0;
     width: 353px;
+    position: relative;
+    top: -2px;
   }
 `;

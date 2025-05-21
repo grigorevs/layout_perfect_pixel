@@ -75,7 +75,7 @@ export const ActivityTitle = styled.h1`
     line-height: 120%;
     letter-spacing: -3px;
     width: 740px;
-    margin: 87px 0 53px;
+    margin: 87px 0 13px;
   }
 `;
 
