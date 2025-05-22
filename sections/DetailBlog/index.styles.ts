@@ -8,6 +8,9 @@ export const BlogWrap = styled.div`
   }
 
   @media (min-width: 1200px) {
+    position: relative;
+    left: 14px;
+    padding-bottom: 35px;
   }
 `;
 
@@ -19,14 +22,17 @@ export const BlogTitle = styled.h1`
   @media (max-width: 1200px) {
     font-size: 32px;
     line-height: 40px;
-    line-height: -1px;
-    width: 335px;
+    letter-spacing: -1px;
+    width: 350px;
+    position: relative;
+    left: 7px;
+    top: -4px;
   }
 
   @media (min-width: 1200px) {
     font-size: 72px;
     line-height: 120%;
-    line-height: -3px;
+    letter-spacing: -3px;
     width: 970px;
     padding: 80px 0 48px;
   }
@@ -139,6 +145,9 @@ export const BlogPost = styled.div`
     }
 
     padding-bottom: 32px;
+    position: relative;
+    right: -7px;
+    top: -6px;
   }
 
   @media (min-width: 1200px) {
@@ -160,7 +169,10 @@ export const BlogText = styled.p`
     font-family: 'Inter-Medium';
     font-size: 14px;
     line-height: 20px;
-    width: 335px;
+    width: 340px;
+    position: relative;
+    left: 7px;
+    top: -9px;
   }
 
   @media (min-width: 1200px) {
@@ -181,6 +193,9 @@ export const BlogTextTitle = styled.h3`
     font-size: 18px;
     line-height: 26px;
     padding: 32px 0 16px;
+    position: relative;
+    left: 7px;
+    top: -8px;
   }
 
   @media (min-width: 1200px) {
@@ -213,7 +228,7 @@ export const BlogUserWrap = styled.div`
 
   @media (max-width: 1200px) {
     gap: 16px;
-    padding: 32px 0 16px;
+    padding: 23px 0 16px;
 
     img {
       width: 199px;
@@ -254,7 +269,9 @@ export const BlogUserTextWrap = styled.div`
 export const BlogDesciptionText = styled(BlogText)`
   @media (max-width: 1200px) {
     display: block;
-    padding-bottom: 80px;
+    padding-bottom: 77px;
+    position: relative;
+    top: -1px;
   }
 
   @media (min-width: 1200px) {
@@ -286,6 +303,12 @@ export const BlogShareBlock = styled.div`
   @media (max-width: 1200px) {
     flex-direction: column;
     gap: 8px;
+
+    p {
+      position: relative;
+      left: 0px;
+      top: 3px;
+    }
   }
 
   @media (min-width: 1200px) {

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import Button from '@/components/Button';
 
 export const FooterWrap = styled.div.withConfig({
   shouldForwardProp: (prop) => prop !== 'backgroundColor',
@@ -98,11 +97,11 @@ export const FooterTitle = styled.h1.withConfig({
 `;
 
 export const FooterText = styled.p.withConfig({
-  shouldForwardProp: (prop) => !['textColor'].includes(prop),
-})<{ textColor: 'light' | 'dark' }>`
+  shouldForwardProp: (prop) => !['theme'].includes(prop),
+})<{ theme: 'light' | 'dark' }>`
   font-family: 'Inter-SemiBold';
   font-weight: 600;
-  color: ${({ textColor }) => (textColor === 'dark' ? '#FFFFFF' : '#1D1E25')};
+  color: ${({ theme }) => (theme === 'dark' ? '#FFFFFF' : '#1D1E25')};
   @media (max-width: 1200px) {
     font-size: 16px;
     line-height: 24px;
@@ -111,17 +110,19 @@ export const FooterText = styled.p.withConfig({
   }
 
   @media (min-width: 1200px) {
-    font-size: 24px;
+    font-size: ${({ theme }) => (theme === 'dark' ? '18px' : '24px')};
+    position: relative;
+    top: ${({ theme }) => (theme === 'dark' ? '-8px' : '0')};
     line-height: 35px;
-    letter-spacing: 0;
+    color: ${({ theme }) => (theme === 'dark' ? '#AFB3BB' : '#1D1E25')};
     width: 543px;
   }
 `;
 
 export const LineBlock = styled.div.withConfig({
-  shouldForwardProp: (prop) => prop !== 'color',
-})<{ color: string }>`
-  background-color: ${({ color }) => (color === 'dark' ? '#FFFFFF' : '#000000')};
+  shouldForwardProp: (prop) => prop !== 'theme',
+})<{ theme: string }>`
+  background-color: ${({ theme }) => (theme === 'dark' ? '#FFFFFF' : '#000000')};
   height: 1px;
 
   @media (max-width: 1200px) {
@@ -132,6 +133,7 @@ export const LineBlock = styled.div.withConfig({
   @media (min-width: 1200px) {
     width: 76px;
     margin-top: 20px;
+    display: ${({ theme }) => (theme === 'dark' ? 'none' : 'block')};
   }
 `;
 
@@ -189,18 +191,15 @@ export const FooterCompanyText = styled.p.withConfig({
 export const FooterButtonWrap = styled.div`
   @media (max-width: 1200px) {
     padding: 3px 0 0 43px;
+    button {
+      width: 142px;
+      height: 44px;
+      font-size: 14px;
+    }
   }
 
   @media (min-width: 1200px) {
     padding: 110px 0 0 30px;
-  }
-`;
-
-export const FooterButton = styled(Button)`
-  @media (max-width: 1200px) {
-    width: 142px;
-    height: 44px;
-    font-size: 14px;
   }
 `;
 
@@ -295,7 +294,9 @@ export const FooterCopyrightText = styled.p`
   }
 `;
 
-export const FooterCopyright = styled.div`
+export const FooterCopyright = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'theme',
+})<{ theme: string }>`
   display: flex;
   justify-content: center;
   padding-top: 46px;
@@ -312,6 +313,7 @@ export const FooterCopyright = styled.div`
   }
 
   @media (min-width: 1200px) {
+    display: ${({ theme }) => (theme === 'dark' ? 'none' : 'flex')};
     width: 1200px;
     height: 129px;
     position: relative;
@@ -373,4 +375,52 @@ export const FooterMobileLink = styled.a`
   color: #7e8492;
   font-weight: 500;
   font-family: 'Inter-Medium';
+`;
+
+export const FooterCopyrightMobile = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'theme',
+})<{ theme: string }>`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    display: ${({ theme }) => (theme === 'dark' ? 'flex' : 'none')};
+    gap: 93px;
+    position: relative;
+    top: -28px;
+    right: 5px;
+    width: 1200px;
+    padding: 40px 0 58px;
+    justify-content: space-between;
+    border-top: 1px solid #606060;
+  }
+`;
+
+export const FooterMobileSocialsWrap = styled.div`
+  display: flex;
+  gap: 62px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+`;
+
+export const FooterMobileLinksBlock = styled.div`
+  display: flex;
+  gap: 40px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Inter-Medium';
+  font-weight: 500;
+`;
+
+export const FooterMobileLinkText = styled.p`
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Inter-Medium';
+  font-weight: 500;
 `;

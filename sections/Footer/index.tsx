@@ -4,11 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import {
   BackgroundTopBlur,
-  FooterButton,
   FooterButtonWrap,
   FooterCompanyText,
   FooterCompanyTextBlock,
   FooterCopyright,
+  FooterCopyrightMobile,
   FooterCopyrightText,
   FooterDescription,
   FooterDescriptionBlock,
@@ -21,8 +21,11 @@ import {
   FooterListWrap,
   FooterLogoIcon,
   FooterMobileLink,
+  FooterMobileLinksBlock,
   FooterMobileLinksList,
   FooterMobileLinksWrap,
+  FooterMobileLinkText,
+  FooterMobileSocialsWrap,
   FooterSocialsImagesWrap,
   FooterText,
   FooterTitle,
@@ -40,6 +43,7 @@ import TwitterLogoDark from '@/public/images/home/TwitterDark.svg';
 import InstagramLogoDark from '@/public/images/home/InstagramDark.svg';
 import LinkedinLogoDark from '@/public/images/home/LinkedinDark.svg';
 import { LineBlock } from './index.styles';
+import Button from '@/components/Button';
 
 interface FooterProps {
   theme: 'light' | 'dark';
@@ -54,15 +58,15 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
         <FooterDescriptionBlock>
           <FooterTitle color={theme}>Think beyond the wave</FooterTitle>
           <FooterDescription>
-            <LineBlock color={theme} />
-            <FooterText textColor={theme}>
+            <LineBlock theme={theme} />
+            <FooterText theme={theme}>
               Ask about Sans products, pricing, implementation, or anything else. Our highly trained
               reps are standing by, ready to help
             </FooterText>
           </FooterDescription>
         </FooterDescriptionBlock>
         <FooterButtonWrap>
-          <FooterButton theme={theme}>Try for free</FooterButton>
+          <Button theme={theme}>Try for free</Button>
         </FooterButtonWrap>
       </FooterDescriptionWrap>
       <FooterLinkstWrap>
@@ -112,7 +116,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
           </FooterListBlock>
         </FooterListWrap>
       </FooterLinkstWrap>
-      <FooterCopyright>
+      <FooterCopyright theme={theme}>
         <FooterMobileLinksWrap>
           <FooterSocialsImagesWrap>
             <Image src={theme === 'light' ? FacebookLogo : FacebookLogoDark} alt="FacebookLogo" />
@@ -131,6 +135,24 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
         </FooterMobileLinksWrap>
         <FooterCopyrightText>© Copyright 2023 All Rights Reserved</FooterCopyrightText>
       </FooterCopyright>
+      <FooterCopyrightMobile theme={theme}>
+        <div>
+          <FooterMobileSocialsWrap>
+            <FooterSocialsImagesWrap>
+              <Image src={FacebookLogoDark} alt="FacebookLogo" />
+              <Image src={TwitterLogoDark} alt="TwitterLogo" />
+              <Image src={InstagramLogoDark} alt="InstagramLogo" />
+              <Image src={LinkedinLogoDark} alt="LinkedinLogo" />
+            </FooterSocialsImagesWrap>
+            <FooterMobileLinksBlock>
+              <FooterMobileLinkText>Privacy Policy</FooterMobileLinkText>
+              <FooterMobileLinkText>Terms & Conditions</FooterMobileLinkText>
+              <FooterMobileLinkText>Support</FooterMobileLinkText>
+            </FooterMobileLinksBlock>
+          </FooterMobileSocialsWrap>
+        </div>
+        <FooterMobileLinkText>© Copyright 2023 All Rights Reserved</FooterMobileLinkText>
+      </FooterCopyrightMobile>
     </FooterWrap>
   );
 };
