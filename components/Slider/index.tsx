@@ -3,7 +3,7 @@ import { StyledWideSlider, StyledSlider } from './index.styles';
 
 interface SliderProps {
   children: React.ReactNode;
-  type: 'regular' | 'wide';
+  type?: 'regular' | 'wide';
 }
 
 const Slider: React.FC<SliderProps> = ({ children, type }) => {

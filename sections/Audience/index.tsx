@@ -22,6 +22,7 @@ import {
   BackgroundTopBlur,
   LineBlock,
 } from './index.styles';
+import Slider from '@/components/Slider';
 
 const Audience = () => {
   return (
@@ -39,17 +40,20 @@ const Audience = () => {
         <AudienceLogo src={Logo} alt="Logo" />
       </AudienceBlock>
       <AudiencePicBlock>
-        <AudiencePic src={Pic1} alt="Pic1" width={502} height={629} />
-        <AudienceDetailsBlock>
-          <AudienceDetailsPic src={Pic2} alt="Pic2" />
-          <AudiencePicTitle>What we believe in</AudiencePicTitle>
-          <AudiencePicText>
-            Over the years at Sans, we’ve put a lot of thought into what it is that makes us who we
-            are. The qualities that unite us, that make us such an effective team, and...
-          </AudiencePicText>
-          <Button theme="light">See Details →</Button>
-        </AudienceDetailsBlock>
-        <AudiencePic src={Pic3} alt="Pic3" width={252} height={460} />
+        <Slider type="wide">
+          <AudiencePic src={Pic1} alt="Pic1" width={502} height={629} />
+          <AudienceDetailsBlock>
+            <AudienceDetailsPic src={Pic2} alt="Pic2" />
+            <AudiencePicTitle>What we believe in</AudiencePicTitle>
+            <AudiencePicText>
+              Over the years at Sans, we’ve put a lot of thought into what it is that makes us who
+              we are. The qualities that unite us, that make us such an effective team, and...
+            </AudiencePicText>
+            <Button theme="light">See Details →</Button>
+          </AudienceDetailsBlock>
+          <AudiencePic src={Pic3} alt="Pic3" width={506} height={460} />
+          <AudiencePic src={Pic1} alt="Pic1" width={502} height={629} />
+        </Slider>
       </AudiencePicBlock>
       <BackgroundTopBlur src={TopBlur} alt="Blur" />
     </AudienceWrap>

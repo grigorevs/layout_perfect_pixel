@@ -12,6 +12,8 @@ import InstagramLogo from '@/public/images/about/Instagram.svg';
 import {
   SocialMediaBlock,
   SocialMediaImage,
+  TeamDescriptionTitle,
+  TeamDescriptionTitleMobile,
   TeamImage,
   TeamMainTextBlock,
   TeamPersonBlock,
@@ -93,7 +95,10 @@ const Team = () => {
         </Slider>
       </TeamSliderWrap>
       <TeamTextBlock>
-        <TeamTitle widthValue={'626px'}>Join our team, The one with the master touch</TeamTitle>
+        <TeamDescriptionTitle widthValue={'626px'}>
+          Join our team, The one with the master touch
+        </TeamDescriptionTitle>
+        <TeamDescriptionTitleMobile>Join our team</TeamDescriptionTitleMobile>
         <TeamTextBlockWrap>
           <TeamText widthValue={'506px'}>
             We believe it takes great people to make a great product. That’s why we hire not only

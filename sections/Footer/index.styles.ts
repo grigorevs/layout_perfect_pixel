@@ -391,7 +391,7 @@ export const FooterCopyrightMobile = styled.div.withConfig({
     top: -28px;
     right: 5px;
     width: 1200px;
-    padding: 40px 0 58px;
+    padding: 40px 5px 58px;
     justify-content: space-between;
     border-top: 1px solid #606060;
   }
@@ -423,4 +423,6 @@ export const FooterMobileLinkText = styled.p`
   line-height: 20px;
   font-family: 'Inter-Medium';
   font-weight: 500;
+  position: relative;
+  top: -2px;
 `;

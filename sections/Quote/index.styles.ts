@@ -5,11 +5,14 @@ export const QuoteWrap = styled.div`
   justify-content: center;
 
   @media (max-width: 1200px) {
-    padding: 56px 0;
+    padding: 50px 0;
   }
 
   @media (min-width: 1200px) {
     padding-bottom: 160px;
+    position: relative;
+    top: 1px;
+    left: 4px;
   }
 `;
 
@@ -50,6 +53,9 @@ export const QuoteTitle = styled.h1`
     line-height: 120%;
     letter-spacing: -2px;
     width: 480px;
+    position: relative;
+    top: 3px;
+    left: -3px;
   }
 `;
 

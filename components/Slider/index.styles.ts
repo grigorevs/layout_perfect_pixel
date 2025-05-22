@@ -54,6 +54,5 @@ export const StyledWideSlider = styled.div`
     justify-content: space-between;
     width: 1600px;
     gap: 32px;
-    left: 200px;
   }
 `;

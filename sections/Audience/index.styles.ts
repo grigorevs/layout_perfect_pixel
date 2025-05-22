@@ -8,7 +8,8 @@ export const AudienceWrap = styled.div`
 
   @media (max-width: 1200px) {
     align-items: center;
-    padding-top: 10px;
+    position: relative;
+    top: -5px;
   }
 
   @media (min-width: 1200px) {
@@ -110,42 +111,48 @@ export const AudienceLogo = styled(Image)`
   position: absolute;
 
   @media (max-width: 1200px) {
-    width: 54px;
-    height: 54px;
+    width: 70px;
+    height: 70px;
     right: 0px;
-    bottom: 20px;
+    bottom: 0px;
   }
 
   @media (min-width: 1200px) {
-    width: 127px;
-    height: 127px;
-    right: -190px;
-    bottom: 27px;
+    width: 162px;
+    height: 162px;
+    bottom: 28px;
+    right: -215px;
   }
 `;
 
 export const AudiencePicBlock = styled.div`
   display: flex;
 
-  @media (max-width: 1439px) {
+  @media (max-width: 1200px) {
     align-self: center;
     margin-top: 8px;
   }
 
-  @media (min-width: 1439px) {
+  @media (min-width: 1200px) {
     display: flex;
     gap: 32px;
     margin-top: 135px;
     align-items: start;
+    position: relative;
+    left: -20px;
+
+    img {
+      object-fit: cover;
+    }
   }
 `;
 
 export const AudiencePic = styled(Image)`
-  @media (max-width: 1440px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1200px) {
     display: block;
   }
 `;
@@ -160,12 +167,14 @@ export const AudiencePicTitle = styled.h3`
     line-height: 26px;
     letter-spacing: 0;
     padding: 16px 0 8px;
+    position: relative;
+    left: -2px;
   }
 
   @media (min-width: 1200px) {
     font-size: 32px;
     line-height: 150%;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     padding: 24px 0 8px;
   }
 `;
@@ -195,6 +204,13 @@ export const AudienceDetailsBlock = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
+
+  @media (max-width: 1200px) {
+    button {
+      width: 142px;
+      font-size: 14px;
+    }
+  }
 `;
 
 export const AudienceDetailsPic = styled(Image)`

@@ -7,12 +7,12 @@ export const TeamWrap = styled.div`
 
   @media (max-width: 1200px) {
     align-items: center;
-    padding-bottom: 80px;
+    padding: 7px 0 78px;
   }
 
   @media (min-width: 1200px) {
     width: 1200px;
-    padding-bottom: 160px;
+    padding-bottom: 155px;
   }
 `;
 
@@ -35,6 +35,42 @@ export const TeamTitle = styled.h1.withConfig({
     line-height: 120%;
     letter-spacing: -2px;
     width: ${(props) => props.widthValue};
+  }
+`;
+
+export const TeamDescriptionTitle = styled.h1.withConfig({
+  shouldForwardProp: (prop) => prop !== 'widthValue',
+})<{ widthValue: string }>`
+  font-family: 'Inter-SemiBold';
+  font-weight: 600;
+  color: #1d1e25;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -2px;
+    width: ${(props) => props.widthValue};
+  }
+`;
+
+export const TeamDescriptionTitleMobile = styled.h1`
+  font-family: 'Inter-SemiBold';
+  font-weight: 600;
+  color: #1d1e25;
+
+  @media (max-width: 1200px) {
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0;
+    width: 335px;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
   }
 `;
 
@@ -131,16 +167,18 @@ export const SliderIcon = styled(Image)`
 `;
 
 export const TeamImage = styled(Image)`
-  object-fit: cover;
-
   @media (max-width: 1200px) {
     width: 247px;
     height: 244px;
+    object-fit: fill;
   }
 
   @media (min-width: 1200px) {
     width: 379px;
     height: 434px;
+    position: relative;
+    top: -4px;
+    object-fit: cover;
   }
 `;
 
@@ -180,6 +218,9 @@ export const TeamPersonTextBlock = styled.div`
 
   @media (min-width: 1200px) {
     gap: 8px;
+    position: relative;
+    left: 1px;
+    top: -2px;
   }
 `;
 
@@ -272,5 +313,8 @@ export const TeamTextBlockWrap = styled.div`
 
   @media (min-width: 1200px) {
     gap: 24px;
+    position: relative;
+    top: -2px;
+    left: 3px;
   }
 `;

@@ -55,6 +55,7 @@ export const ActivitySliderWrap = styled.div`
     position: relative;
     height: 769px;
     top: -10px;
+    left: 180px;
 
     :nth-child(1) h6 {
       width: 300px !important;
