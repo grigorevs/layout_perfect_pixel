@@ -15,6 +15,7 @@ export default [
         HTMLDivElement: 'readonly',
         window: 'readonly',
         document: 'readonly',
+        HTMLButtonElement: 'readonly',
       },
     },
     plugins: {
