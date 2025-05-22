@@ -3,7 +3,6 @@ import { styled } from 'styled-components';
 export const ContentWrap = styled.div`
   display: flex;
   justify-content: center;
-  width: 100vw;
   background-color: #1d1e25;
 
   @media (max-width: 1200px) {
@@ -12,6 +11,7 @@ export const ContentWrap = styled.div`
 
   @media (min-width: 1200px) {
     padding: 120px 0;
+    width: 100vw;
   }
 `;
 
@@ -24,7 +24,7 @@ export const ContentPicBlock = styled.div`
     width: 335px;
 
     h3 {
-      padding: 16px 0 8px;
+      padding: 16px 0 16px;
     }
     img {
       width: 335px;
@@ -49,6 +49,10 @@ export const ContentBlock = styled.div`
       text-decoration: underline;
       text-underline-offset: 4px;
       text-decoration-thickness: 1px;
+    }
+
+    & > *:nth-child(4) h3 {
+      padding-bottom: 6px;
     }
   }
 

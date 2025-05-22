@@ -13,7 +13,7 @@ export const ArticlesWrap = styled.div`
   }
 
   @media (min-width: 1200px) {
-    padding: 160px 0 220px;
+    padding: 160px 0 178px;
     gap: 80px;
   }
 `;
@@ -28,6 +28,24 @@ export const ArticleTextBlock = styled.div`
 
   @media (min-width: 1200px) {
     gap: 24px;
+  }
+`;
+
+export const CarouselWrap = styled.div`
+  @media (max-width: 1200px) {
+    > div > div:nth-child(2) > div > h4 {
+      width: 200px;
+    }
+
+    > div > div:nth-child(2) > div > p {
+      width: 240px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    :nth-child(3) h4 {
+      width: 500px;
+    }
   }
 `;
 
@@ -128,7 +146,7 @@ export const CarouselTextBlock = styled.div`
   }
 `;
 
-export const CarouselItemTitle = styled.h3`
+export const CarouselItemTitle = styled.h4`
   font-family: 'Inter-SemiBold';
   color: #1d1e25;
   font-weight: 600;
@@ -169,4 +187,66 @@ export const CarouselItemText = styled.p`
 
 export const CarouselButton = styled(Button)`
   border: 1px solid #ced1d8 !important;
+  background-color: #ffffff;
+  color: #1d1e25;
+
+  @media (max-width: 1200px) {
+    width: 124px;
+    height: 44px;
+    font-size: 14px;
+  }
+`;
+
+export const ArticlesNextButton = styled.button`
+  border-radius: 100px;
+  background-color: #1d1e25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+
+  @media (max-width: 1200px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 50px;
+    height: 50px;
+  }
+`;
+
+export const ArticlesPrevButton = styled.button`
+  border-radius: 100px;
+  border: 1px solid #ced1d8;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 50px;
+    height: 50px;
+  }
+`;
+
+export const ArticlesButtonsBlock = styled.div`
+  display: flex;
+
+  @media (max-width: 1200px) {
+    gap: 8px;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 16px;
+    position: relative;
+    top: 3px;
+  }
 `;

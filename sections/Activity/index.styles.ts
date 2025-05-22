@@ -23,7 +23,7 @@ export const ActivityWrap = styled.div`
 
   @media (max-width: 1200px) {
     align-items: center;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: 1200px) {
@@ -54,6 +54,19 @@ export const ActivitySliderWrap = styled.div`
   @media (min-width: 1200px) {
     position: relative;
     height: 769px;
+    top: -10px;
+
+    :nth-child(1) h6 {
+      width: 300px !important;
+    }
+
+    :nth-child(2) h6 {
+      width: 470px;
+    }
+
+    :nth-child(3) h6 {
+      width: 310px;
+    }
   }
 `;
 
@@ -67,7 +80,9 @@ export const ActivityTitle = styled.h1`
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -1px;
-    margin-bottom: 48px;
+    margin-bottom: 41px;
+    position: relative;
+    top: -4px;
   }
 
   @media (min-width: 1200px) {
@@ -76,12 +91,17 @@ export const ActivityTitle = styled.h1`
     letter-spacing: -3px;
     width: 740px;
     margin: 87px 0 13px;
+    position: relative;
+    top: 10px;
   }
 `;
 
 export const ActivityDescription = styled.div`
   display: flex;
-  gap: 8px;
+
+  @media (max-width: 1200px) {
+    gap: 8px;
+  }
 
   @media (min-width: 1200px) {
     gap: 27px;
@@ -183,6 +203,7 @@ export const ActivitySliderTabs = styled.div`
   }
 
   @media (max-width: 1200px) {
+    width: 335px;
     gap: 8px;
     margin-bottom: 40px;
     font-size: 14px;
@@ -194,12 +215,14 @@ export const ActivitySliderTabs = styled.div`
     margin-bottom: 90px;
     font-size: 16px;
     line-height: 24px;
+    position: relative;
+    top: 11px;
   }
 `;
 
 export const ActivitySliderTab = styled.p`
   @media (max-width: 1200px) {
-    padding: 8px 12px;
+    padding: 10px 12px 0;
     white-space: nowrap;
   }
 
@@ -218,7 +241,6 @@ export const ActivitySliderTitle = styled.h1`
     line-height: 24px;
     letter-spacing: 0;
     width: 247px;
-    margin-top: 8px;
   }
 
   @media (min-width: 1200px) {
@@ -250,7 +272,7 @@ export const ActivitySliderText = styled.p`
   }
 `;
 
-export const ActivitySliderDescription = styled.p`
+export const ActivitySliderDescription = styled.h6`
   color: #7e8492;
   letter-spacing: 0;
 

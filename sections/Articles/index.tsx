@@ -6,12 +6,10 @@ import { useRef, useState } from 'react';
 import ArrowNext from '@/public/images/home/ArrowNext.svg';
 import ArrowBack from '@/public/images/home/ArrowPrevDisabled.svg';
 import {
-  TestimonialButtonsBlock,
-  TestimonialPrevButton,
-  TestimonialNextButton,
-} from '../Testimonials/index.styles';
-import {
   ArticleNavBlock,
+  ArticlesButtonsBlock,
+  ArticlesNextButton,
+  ArticlesPrevButton,
   ArticlesWrap,
   ArticleText,
   ArticleTextBlock,
@@ -21,6 +19,7 @@ import {
   CarouselItemText,
   CarouselItemTitle,
   CarouselTextBlock,
+  CarouselWrap,
 } from './index.styles';
 import { articleData } from './data';
 
@@ -46,27 +45,29 @@ const Articles = () => {
             Complex tech decoded by engineers, business trends analyzed by experts.
           </ArticleText>
         </ArticleTextBlock>
-        <TestimonialButtonsBlock>
-          <TestimonialPrevButton onClick={handlePrev}>
+        <ArticlesButtonsBlock>
+          <ArticlesPrevButton onClick={handlePrev}>
             <Image src={ArrowBack} alt="Previous" />
-          </TestimonialPrevButton>
-          <TestimonialNextButton onClick={handleNext}>
+          </ArticlesPrevButton>
+          <ArticlesNextButton onClick={handleNext}>
             <Image src={ArrowNext} alt="Next" />
-          </TestimonialNextButton>
-        </TestimonialButtonsBlock>
+          </ArticlesNextButton>
+        </ArticlesButtonsBlock>
       </ArticleNavBlock>
-      <Carousel ref={carouselRef}>
-        {data.map((item, index) => (
-          <CarouselItem key={index}>
-            <Image src={item.image} alt={'Img'} />
-            <CarouselTextBlock>
-              <CarouselItemTitle>{item.title}</CarouselItemTitle>
-              <CarouselItemText>{item.text}</CarouselItemText>
-            </CarouselTextBlock>
-            <CarouselButton theme="dark">Read More</CarouselButton>
-          </CarouselItem>
-        ))}
-      </Carousel>
+      <CarouselWrap>
+        <Carousel ref={carouselRef}>
+          {data.map((item, index) => (
+            <CarouselItem key={index}>
+              <Image src={item.image} alt={'Img'} />
+              <CarouselTextBlock>
+                <CarouselItemTitle>{item.title}</CarouselItemTitle>
+                <CarouselItemText>{item.text}</CarouselItemText>
+              </CarouselTextBlock>
+              <CarouselButton theme="dark">Read More</CarouselButton>
+            </CarouselItem>
+          ))}
+        </Carousel>
+      </CarouselWrap>
     </ArticlesWrap>
   );
 };
