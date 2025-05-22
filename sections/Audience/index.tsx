@@ -5,6 +5,7 @@ import Pic1 from '@/public/images/about/AudiencePic1.png';
 import Pic2 from '@/public/images/about/AudiencePic2.png';
 import Pic3 from '@/public/images/about/AudiencePic3.png';
 import Logo from '@/public/images/about/LinkedPath.svg';
+import TopBlur from '@/public/images/home/Ellipse125.svg';
 import {
   AudienceBlock,
   AudienceDetailsBlock,
@@ -21,8 +22,6 @@ import {
   BackgroundTopBlur,
   LineBlock,
 } from './index.styles';
-
-import TopBlur from '@/public/images/home/Ellipse125.svg';
 
 const Audience = () => {
   return (

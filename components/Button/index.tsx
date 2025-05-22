@@ -1,13 +1,12 @@
 import { StyledButton } from './index.styles';
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  theme: 'light' | 'dark';
-  [key: string]: unknown;
+  theme?: 'light' | 'dark';
 }
 
-const Button: React.FC<ButtonProps> = ({ children, theme, ...props }) => {
+const Button = ({ children, theme = 'light', ...props }: ButtonProps) => {
   return (
     <StyledButton buttonTheme={theme} {...props}>
       {children}

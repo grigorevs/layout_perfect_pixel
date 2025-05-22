@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
-import StyledSlider from './index.styles';
+import { StyledWideSlider, StyledSlider } from './index.styles';
 
 interface SliderProps {
   children: React.ReactNode;
+  type: 'regular' | 'wide';
 }
 
-const Slider: React.FC<SliderProps> = ({ children }) => {
+const Slider: React.FC<SliderProps> = ({ children, type }) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -41,16 +42,18 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  return (
-    <StyledSlider
-      ref={sliderRef}
-      onMouseDown={onMouseDown}
-      onMouseLeave={onMouseLeave}
-      onMouseUp={onMouseUp}
-      onMouseMove={onMouseMove}
-    >
-      {children}
-    </StyledSlider>
+  const commonProps = {
+    ref: sliderRef,
+    onMouseDown,
+    onMouseLeave,
+    onMouseUp,
+    onMouseMove,
+  };
+
+  return type === 'wide' ? (
+    <StyledWideSlider {...commonProps}>{children}</StyledWideSlider>
+  ) : (
+    <StyledSlider {...commonProps}>{children}</StyledSlider>
   );
 };
 
