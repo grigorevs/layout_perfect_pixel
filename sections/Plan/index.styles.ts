@@ -10,12 +10,37 @@ export const DetailsContainer = styled.div`
 
   @media (max-width: 1200px) {
     gap: 16px;
-    padding: 32px 0 56px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: 1200px) {
-    gap: 56px;
-    padding: 92px 0 122px;
+    gap: 50px;
+    padding: 60px 0 122px;
+  }
+`;
+
+export const DetailsOffersBlock = styled.div`
+  position: absolute;
+  width: 118px;
+  height: 32px;
+  background-color: #1463ff;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Inter-Medium';
+  font-weight: 500;
+
+  @media (max-width: 1200px) {
+    padding: 5px 0 0 13px;
+    height: 30px;
+    left: 195px;
+    top: 25px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 6px 10px;
+    right: 22px;
   }
 `;
 
@@ -49,6 +74,8 @@ export const DetailsMark = styled.div`
     line-height: 20px;
     width: 128px;
     height: 28px;
+    position: relative;
+    top: -6px;
   }
 
   @media (min-width: 1200px) {
@@ -58,6 +85,7 @@ export const DetailsMark = styled.div`
     line-height: 24px;
     width: 144px;
     height: 32px;
+    margin-top: 30px;
   }
 `;
 
@@ -72,6 +100,8 @@ export const DetailsTitle = styled.h1`
     line-height: 40px;
     letter-spacing: -1px;
     width: 300px;
+    position: relative;
+    top: -6px;
   }
 
   @media (min-width: 1200px) {
@@ -79,6 +109,8 @@ export const DetailsTitle = styled.h1`
     line-height: 120%;
     letter-spacing: -3px;
     width: 903px;
+    position: relative;
+    top: -28px;
   }
 `;
 
@@ -107,21 +139,64 @@ export const DetailsToggle = styled.div`
   img {
     cursor: pointer;
   }
+
+  @media (min-width: 1200px) {
+    position: relative;
+    top: -20px;
+  }
+
+  @media (max-width: 1200px) {
+    position: relative;
+    top: -5px;
+  }
 `;
 
 export const PlansContainer = styled.div`
   display: flex;
 
   @media (max-width: 1200px) {
-    gap: 32px;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    top: -8px;
+    gap: 28px;
+
+    :nth-child(3) button {
+      margin-top: 19px;
+    }
+
+    :nth-child(3) div:nth-child(4) {
+      position: relative;
+      top: -2px;
+    }
+
+    :nth-child(3) div:nth-child(5) {
+      position: relative;
+    }
+
+    :nth-child(3) div:nth-child(6) {
+      position: relative;
+      top: -3px;
+      right: -1px;
+    }
+
+    :nth-child(3) div:nth-child(8) {
+      position: relative;
+      top: -4px;
+      right: 0px;
+    }
+
+    :nth-child(3) div:nth-child(7) {
+      position: relative;
+      top: -3px;
+      right: 0px;
+    }
   }
 
   @media (min-width: 1200px) {
-    gap: 20px;
     justify-content: center;
     padding: 40px 0 78px;
+    gap: 32px;
   }
 `;
 
@@ -136,22 +211,11 @@ export const PlanCard = styled.div<{ $isSelected: boolean }>`
   display: flex;
   flex-direction: column;
   z-index: 100;
+  position: relative;
 
-  @media (max-width: 1200px) {
-    width: 335px;
-    height: 684px;
-    padding: 24px 20px;
-
-    img {
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    width: 378px;
-    height: 801px;
-    padding: 40px 24px;
+  button {
+    border: 1px solid #ced1d8 !important;
+    align-self: center;
   }
 
   p {
@@ -159,6 +223,22 @@ export const PlanCard = styled.div<{ $isSelected: boolean }>`
   }
 
   @media (max-width: 1200px) {
+    width: 335px;
+    height: 684px;
+    padding: 24px 20px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    button {
+      width: 124px;
+      height: 44px;
+      margin-top: 23px;
+      font-size: 14px;
+    }
+
     ${({ $isSelected }) =>
       $isSelected &&
       `
@@ -172,12 +252,29 @@ export const PlanCard = styled.div<{ $isSelected: boolean }>`
   }
 
   @media (min-width: 1200px) {
+    width: 378px;
+    height: 801px;
+    padding: 40px 24px;
+
+    button {
+      width: 160px;
+      height: 56px;
+      margin-top: 40px;
+    }
+
     ${({ $isSelected }) =>
       $isSelected &&
       `
     background-color: #161A34;
     color: white;
-    transform: translateY(-64px);
+    transform: translateY(-62px);
+    height: 789px;
+
+    h5 {
+      line-height: 20px;
+      width: 330px;
+      font-size: 14px;
+    }
   `}
 
     &:hover {
@@ -195,7 +292,9 @@ export const Price = styled.div`
 export const PlansButton = styled(Button)`
   border: 1px solid #ced1d8 !important;
   align-self: center;
-  margin-top: 40px;
+
+  @media (min-width: 1200px) {
+  }
 `;
 
 export const PlanCardTitle = styled.h3`
@@ -204,10 +303,10 @@ export const PlanCardTitle = styled.h3`
   font-size: 24px;
   line-height: 34px;
   letter-spacing: 0;
-  padding: 16px 0 8px;
+  padding: 19px 0 8px;
 `;
 
-export const PlanCardText = styled.p`
+export const PlanCardText = styled.h5`
   font-family: 'Inter-Medium';
   font-weight: 500;
   color: #7e8492 !important;
@@ -271,6 +370,6 @@ export const ListTitle = styled.p`
 
 export const ListBlock = styled.div`
   display: flex;
-  gap: 18px;
+  gap: 20px;
   flex-direction: column;
 `;

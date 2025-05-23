@@ -15,7 +15,7 @@ export const QuestionsTitle = styled.h1`
   @media (max-width: 1200px) {
     font-size: 24px;
     line-height: 34px;
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     width: 295px;
   }
 
@@ -23,6 +23,9 @@ export const QuestionsTitle = styled.h1`
     font-size: 56px;
     line-height: 120%;
     letter-spacing: -2px;
+    position: relative;
+    top: 3px;
+    left: 32px;
   }
 `;
 
@@ -45,20 +48,24 @@ export const QuestionsText = styled.p`
     letter-spacing: 0;
     font-family: 'Inter-Medium';
     font-weight: 500;
+    position: relative;
+    left: 32px;
+    top: 2px;
   }
 `;
 
 export const QuestionsTextBlock = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
 
   @media (max-width: 1200px) {
-    margin: 56px 0 12px;
+    margin: 48px 0 12px;
+    gap: 12px;
   }
 
   @media (min-width: 1200px) {
     margin: 82px 0 24px;
+    gap: 24px;
   }
 `;
 
@@ -69,12 +76,18 @@ export const AccordionContainer = styled.div.withConfig({
 
   @media (max-width: 1200px) {
     width: 335px;
-    padding-bottom: 80px;
+    padding-bottom: 77px;
   }
 
   @media (min-width: 1200px) {
     width: 1114px;
     padding-bottom: 160px;
+    position: relative;
+    left: 32px;
+    display: flex;
+    gap: 62px;
+    flex-direction: column;
+    padding-top: 60px;
   }
 `;
 
@@ -92,7 +105,6 @@ export const Question = styled.button.withConfig({
   letter-spacing: 0%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
@@ -102,10 +114,10 @@ export const Question = styled.button.withConfig({
   width: 100%;
 
   @media (max-width: 1200px) {
-    padding: 24px 0 12px;
+    padding: 23px 0 12px;
     font-size: 16px;
     line-height: 24px;
-
+    align-items: start;
     p {
       width: 267px;
     }
@@ -113,13 +125,26 @@ export const Question = styled.button.withConfig({
     img {
       width: 11px;
       height: 11px;
+      position: relative;
+      top: 2px;
+      left: -3px;
     }
   }
 
   @media (min-width: 1200px) {
-    padding: 56px 0 32px;
     font-size: 24px;
     line-height: 150%;
+    align-items: center;
+
+    p {
+      padding-bottom: 25px;
+    }
+
+    img {
+      position: relative;
+      left: -1px;
+      top: -17px;
+    }
   }
 `;
 
@@ -150,6 +175,8 @@ export const Answer = styled.div.withConfig({
     font-size: 18px;
     line-height: 32px;
     width: 641px;
-    padding: ${({ isOpen }) => (isOpen ? '16px 0 32px' : '0')};
+    padding-bottom: ${({ isOpen }) => (isOpen ? '5px' : '0')};
+    position: relative;
+    top: -10px;
   }
 `;

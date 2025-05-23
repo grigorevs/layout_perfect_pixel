@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import {
   PlansContainer,
   PlanCard,
-  PlansButton,
   PlanCardTitle,
   PlanCardText,
   PriceBlock,
@@ -19,6 +18,7 @@ import {
   DetailsToggle,
   BackgroundGreenBlur,
   BackgroundYellowBlur,
+  DetailsOffersBlock,
 } from './index.styles';
 import Image from 'next/image';
 import StarterIcon from '@/public/images/pricing/HeartIcon.svg';
@@ -28,6 +28,7 @@ import ToggleIcon from '@/public/images/pricing/Toggle.svg';
 import YellowBlur from '@/public/images/home/Ellipse125.svg';
 import GreenBlur from '@/public/images/home/Ellipse124.svg';
 import ListItem from '@/components/ListItem';
+import Button from '@/components/Button';
 
 type PlanType = 'starter' | 'popular' | 'enterprice';
 
@@ -71,7 +72,7 @@ const Plans = () => {
             <ListItem text="Customize Your Profile" isDisabled={true} />
             <ListItem text="Display Your Workshops" isDisabled={true} />
           </ListBlock>
-          <PlansButton>Chose Plan</PlansButton>
+          <Button theme="dark">Chose Plan</Button>
         </PlanCard>
 
         <PlanCard
@@ -79,6 +80,7 @@ const Plans = () => {
           $isSelected={selectedPlan === 'popular'}
         >
           <Image src={PopularIcon} alt="PopularIcon" />
+          <DetailsOffersBlock>Best Offers 🔥</DetailsOffersBlock>
           <PlanCardTitle>Popular</PlanCardTitle>
           <PlanCardText>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -98,7 +100,7 @@ const Plans = () => {
             <ListItem text="Customize Your Profile" isDisabled={true} />
             <ListItem text="Display Your Workshops" isDisabled={true} />
           </ListBlock>
-          <PlansButton>Chose Plan</PlansButton>
+          <Button theme="dark">Chose Plan</Button>
         </PlanCard>
 
         <PlanCard
@@ -125,7 +127,7 @@ const Plans = () => {
             <ListItem text="Customize Your Profile" isDisabled={false} />
             <ListItem text="Display Your Workshops" isDisabled={false} />
           </ListBlock>
-          <PlansButton>Chose Plan</PlansButton>
+          <Button theme="dark">Chose Plan</Button>
         </PlanCard>
       </PlansContainer>
     </>

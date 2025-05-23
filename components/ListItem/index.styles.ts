@@ -6,8 +6,15 @@ export const ListItemWrap = styled.div`
 
   @media (max-width: 1200px) {
     img {
-      width: 20px;
-      height: 20px;
+      width: 21px !important;
+      height: 21px !important;
+    }
+
+    @media (min-width: 1200px) {
+      img {
+        width: 25px !important;
+        height: 25px !important;
+      }
     }
   }
 `;
