@@ -8,24 +8,26 @@ export const MapBlockWrap = styled.div`
   align-items: center;
 
   @media (max-width: 1200px) {
-    margin: 14px 0 56px;
+    margin-bottom: 56px;
+    position: relative;
+    top: -2px;
   }
 
   @media (min-width: 1200px) {
     width: 1200px;
-    margin: 90px 0 85px;
+    margin: 90px 0 75px;
   }
 `;
 
 export const MapWrapper = styled.div`
   background-repeat: no-repeat;
-  background-size: contain;
   cursor: pointer;
 
   @media (max-width: 1200px) {
     width: 335px;
     height: 171px;
     background-image: url(${MapSmall.src});
+    /* background-size: contain; */
   }
 
   @media (min-width: 1200px) {
@@ -36,7 +38,7 @@ export const MapWrapper = styled.div`
 `;
 
 export const MapBlock = styled.div`
-    display: flex;
+  display: flex;
 
   @media (max-width: 1200px) {
     width: 335px;
@@ -75,7 +77,7 @@ export const MapsTitle = styled.h1`
 
 export const ContactsBlockWrap = styled.div`
   display: flex;
-  
+
   @media (max-width: 1200px) {
     flex-direction: row;
     width: 335px;
@@ -83,24 +85,31 @@ export const ContactsBlockWrap = styled.div`
     column-gap: 15px;
     row-gap: 24px;
   }
-  
+
   @media (min-width: 1200px) {
     flex-direction: column;
     gap: 40px;
+    position: relative;
+    top: -18px;
+    left: 47px;
+
+    div:nth-child(1) p:nth-child(3) {
+      padding-bottom: 12px;
+    }
   }
 `;
 
 export const ContactsItem = styled.div`
   display: flex;
   flex-direction: column;
-  
+
   @media (max-width: 1200px) {
     width: 160px;
   }
-  
+
   @media (min-width: 1200px) {
     width: 176px;
-    border-bottom: 1px solid #AFB3BB;
+    border-bottom: 1px solid #afb3bb;
   }
 `;
 
@@ -124,26 +133,27 @@ export const ContactsTitle = styled.h4`
 
 export const ContactsText = styled.p`
   font-family: 'Inter';
-  color: #7E8492;
+  color: #7e8492;
   font-weight: 400;
   letter-spacing: 0;
-  padding-bottom: 12px;
 
   @media (max-width: 1200px) {
     font-size: 14px;
     line-height: 20px;
     width: 151px;
+    padding-bottom: 12px;
   }
 
   @media (min-width: 1200px) {
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 20px;
   }
 `;
 
 export const ContactsMail = styled.p`
   font-family: 'Inter-Medium';
-  color: #1D1E25;
+  color: #1d1e25;
   font-weight: 500;
   letter-spacing: 0;
 

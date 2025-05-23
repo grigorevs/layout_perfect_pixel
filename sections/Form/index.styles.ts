@@ -5,7 +5,7 @@ export const FormWrap = styled.div`
   display: flex;
 
   @media (max-width: 1200px) {
-    padding: 56px 0 80px;
+    padding: 37px 0 80px;
     justify-content: center;
   }
 
@@ -32,8 +32,10 @@ export const FormTitle = styled.h1`
   @media (min-width: 1200px) {
     font-size: 36px;
     line-height: 44px;
-    letter-spacing: -2%;
-    padding-bottom: 20px;
+    letter-spacing: -0.7px;
+    padding-bottom: 25px;
+    position: relative;
+    top: 7px;
   }
 `;
 
@@ -112,12 +114,26 @@ export const FormBlock = styled.div`
 
   @media (max-width: 1200px) {
     width: 335px;
-    padding: 24px 24px 32px;
+    padding: 24px 24px 20px;
+
+    button {
+      width: 136px;
+      height: 44px;
+      position: relative;
+      font-size: 14px;
+      top: -5px;
+    }
   }
 
   @media (min-width: 1200px) {
     width: 608px;
-    padding: 56px 48px;
+    padding: 50px 48px;
+
+    button {
+      width: 167px;
+      position: relative;
+      top: -10px;
+    }
   }
 `;
 
@@ -127,7 +143,7 @@ export const FormInputs = styled.div`
   margin-bottom: 32px;
 
   @media (max-width: 1200px) {
-    gap: 32px;
+    gap: 21px;
   }
 
   @media (min-width: 1200px) {
@@ -160,9 +176,10 @@ export const FormImage = styled(Image)`
 
   @media (min-width: 1200px) {
     position: absolute;
-    right: -155px;
+    right: -145px;
     z-index: -1;
     width: 987px;
     height: 885px;
+    object-fit: contain;
   }
 `;

@@ -47,7 +47,7 @@ export const PartnersTitle = styled.h1`
   }
 
   @media (min-width: 1200px) {
-    font-size: 56px;
+    font-size: 48px;
     line-height: 120%;
     letter-spacing: -2px;
   }
