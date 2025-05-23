@@ -372,4 +372,8 @@ export const ListBlock = styled.div`
   display: flex;
   gap: 20px;
   flex-direction: column;
+
+  @media (min-width: 1200px) {
+    gap: 16px;
+  }
 `;
